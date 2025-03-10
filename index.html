@@ -2,67 +2,17 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Erdem Aslan | Portfolyo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erdem Aslan | Kişisel Portfolyo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
             background-color: #f9fafc;
-            position: relative;
-        }
-        h1 { color: #333; }
-        h3 { color: #444; }
-        p { color: #555; line-height: 1.6; }
-        a { color: #007bff; text-decoration: none; margin: 0 10px; font-weight: bold; }
-
-        /* Profil Resmi */
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #007bff;
-            margin-top: 20px;
+            margin: 0;
+            padding: 0;
         }
 
-        /* Hakkımda Bölümü */
-        .section {
-            max-width: 600px;
-            margin: 20px auto;
-            text-align: left;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .section h2 {
-            text-align: center;
-            font-size: 22px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-
-        .section p {
-            font-size: 16px;
-            text-align: justify;
-        }
-
-        /* Sertifikalar Butonu */
-        .btn {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 16px;
-        }
-
-        /* Dil Seçme Butonu */
         .language-switch {
             position: absolute;
             top: 20px;
@@ -70,46 +20,79 @@
         }
 
         .language-switch img {
-            width: 30px;
-            cursor: pointer;
+            width: 40px;
+            height: 25px;
             margin-left: 10px;
-            border-radius: 5px;
+            cursor: pointer;
         }
+
+        .profile-container {
+            margin-top: 60px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 4px solid #007bff;
+        }
+
+        .about-box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
     </style>
 </head>
 <body>
-    <!-- Dil Seçme -->
+
     <div class="language-switch">
-        <a href="index.html"><img src="tr-flag.png" alt="Türkçe"></a>
-        <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
+        <a href="index.html">
+            <img src="turkish-flag.png" alt="Türkçe">
+        </a>
+        <a href="index-en.html">
+            <img src="us-flag.png" alt="English">
+        </a>
     </div>
 
-    <h1>Erdem Aslan</h1>
-    <h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
+    <div class="profile-container">
+        <h1>Erdem Aslan</h1>
+        <h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
+        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-pic">
+        <p>Kişisel portfolyo web siteme hoş geldiniz!</p>
+    </div>
 
-    <!-- Profil Fotoğrafı -->
-    <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-img">
-
-    <p>Kişisel portfolyo web siteme hoş geldiniz!</p>
-
-    <!-- Hakkımda Bölümü -->
-    <div class="section">
+    <div class="about-box">
         <h2>Hakkımda</h2>
-        <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni bilgisayar mühendisliği alanına yönlendirdi. 8 yaşından itibaren pazarda çalışarak iş hayatına adım attım ve farklı işlerde deneyim kazandım.</p>
-        <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplinini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika’da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
-        <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum. Teknolojiye olan tutkumla, inovatif projeler üretmek ve gelecekte profesyonel kariyerime yön vermek istiyorum.</p>
+        <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni bilgisayar mühendisliği alanına yönlendirdi. 8 yaşından itibaren pazarda çalışarak iş hayatına başladım ve farklı işlerde deneyim kazandım.</p>
+        <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika’da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
+        <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum. Teknolojiye olan ilgimle yenilikçi projeler üretmeyi ve profesyonel kariyerimi inşa etmeyi hedefliyorum.</p>
     </div>
 
-    <!-- Sertifikalar Butonu -->
+    <a href="certificates.html" class="button">📜 Sertifikalarım</a>
+    <a href="projects.html" class="button">📂 Projelerim</a>
+
     <p>
-        <a href="certificates.html" class="btn">📜 Sertifikalarım</a>
+        <a href="https://github.com/Sthonem">GitHub</a> |
+        <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
+        <a href="https://www.instagram.com/erdm__aslan/">Instagram</a>
     </p>
 
-    <!-- Sosyal Medya Bağlantıları -->
-    <p>
-      <a href="https://github.com/Sthonem" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank">LinkedIn</a> |
-      <a href="https://www.instagram.com/erdm__aslan/" target="_blank">Instagram</a>
-    </p>
 </body>
 </html>
