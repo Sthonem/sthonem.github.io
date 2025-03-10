@@ -14,7 +14,7 @@
         h1 { color: #333; }
         p { color: #555; }
         a { color: #007bff; text-decoration: none; font-weight: bold; }
-        
+
         /* Sertifikalar Kutusu */
         .certificates {
             max-width: 800px;
@@ -25,14 +25,25 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        
-        /* Sertifika Resimleri */
-        .certificates img {
-            width: 100%;
+
+        /* Sertifika Kartı */
+        .certificate {
+            background: #fff;
+            padding: 15px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 600px;
+        }
+
+        /* Sertifika Resimleri */
+        .certificate img {
+            width: 100%;
+            max-width: 500px;
             border-radius: 5px;
-            margin: 10px 0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto 10px;
         }
 
         /* Geri Dön Butonu */
@@ -54,26 +65,26 @@
         <h2>📜 Aldığım Sertifikalar</h2>
 
         <!-- MATLAB Onramp -->
-        <div>
-            <img src="1mat.jpg" alt="MATLAB Onramp Sertifikası">
+        <div class="certificate">
+            <img src="1mat.png" alt="MATLAB Onramp Sertifikası">
             <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&" target="_blank">MATLAB Onramp Sertifikası</a></p>
         </div>
 
         <!-- Machine Learning Onramp -->
-        <div>
-            <img src="2mat.jpg" alt="Machine Learning Onramp Sertifikası">
+        <div class="certificate">
+            <img src="2mat.png" alt="Machine Learning Onramp Sertifikası">
             <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&" target="_blank">Machine Learning Onramp Sertifikası</a></p>
         </div>
 
         <!-- Image Processing Onramp -->
-        <div>
-            <img src="3mat.jpg" alt="Image Processing Onramp Sertifikası">
+        <div class="certificate">
+            <img src="3mat.png" alt="Image Processing Onramp Sertifikası">
             <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&" target="_blank">Image Processing Onramp Sertifikası</a></p>
         </div>
 
         <!-- Deep Learning Onramp -->
-        <div>
-            <img src="4mat.jpg" alt="Deep Learning Onramp Sertifikası">
+        <div class="certificate">
+            <img src="4mat.png" alt="Deep Learning Onramp Sertifikası">
             <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&" target="_blank">Deep Learning Onramp Sertifikası</a></p>
         </div>
     </div>
