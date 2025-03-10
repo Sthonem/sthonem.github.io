@@ -3,96 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erdem Aslan | Personal Portfolio</title>
+    <title>Erdem Aslan | Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f9fafc;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         .language-switch {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
         }
 
         .language-switch img {
             width: 40px;
-            height: 25px;
-            margin-left: 10px;
+            height: auto;
             cursor: pointer;
+            margin-left: 10px;
         }
 
-        .profile-container {
-            margin-top: 60px;
-        }
-
-        .profile-pic {
-            border-radius: 50%;
+        .profile-img {
             width: 150px;
             height: 150px;
-            object-fit: cover;
-            border: 4px solid #007bff;
+            border-radius: 50%;
+            border: 3px solid #007bff;
         }
 
-        .about-box {
+        .content-box {
             background: white;
             padding: 20px;
-            margin: 20px auto;
-            width: 60%;
             border-radius: 10px;
+            width: 60%;
+            margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            text-align: left;
         }
 
         .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
         }
-
     </style>
 </head>
 <body>
 
+    <!-- Language Selection -->
     <div class="language-switch">
-        <a href="index.html">
-            <img src="turkish-flag.png" alt="Türkçe">
-        </a>
-        <a href="index-en.html">
-            <img src="us-flag.png" alt="English">
-        </a>
+        <a href="index.html"><img src="tr-flag.png" alt="Türkçe"></a>
+        <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
-    <div class="profile-container">
-        <h1>Erdem Aslan</h1>
-        <h3>Computer Engineering Student & Software Developer</h3>
-        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-pic">
-        <p>Welcome to my personal portfolio website!</p>
-    </div>
+    <h1>Erdem Aslan</h1>
+    <h3>Computer Engineering Student & Software Developer</h3>
+    
+    <img src="profile_cropped.jpg" alt="Profile Picture" class="profile-img">
+    
+    <p>Welcome to my personal portfolio website!</p>
 
-    <div class="about-box">
+    <div class="content-box">
         <h2>About Me</h2>
-        <p>Hello, I am Erdem Aslan. My early interest in technology led me to the field of computer engineering. Since the age of 8, I have been working in the marketplace, gaining experience in various jobs.</p>
-        <p>By working in different positions in a factory, I developed work discipline and teamwork skills. Later, through the Work and Travel program, I had the opportunity to work in different sectors in the USA and gain experience in a global work environment.</p>
-        <p>Currently, as a computer engineering student, I continue to develop myself in software development, data analysis, and artificial intelligence. With my passion for technology, I aim to create innovative projects and shape my professional career.</p>
+        <p>Hello, I am Erdem Aslan. Since a young age, my interest in technology has guided me towards software development...</p>
+        <a href="certificates-en.html" class="button">📜 My Certificates</a>
+        <a href="projects-en.html" class="button">💻 My Projects</a>
     </div>
-
-    <a href="certificates-en.html" class="button">📜 My Certificates</a>
-    <a href="projects-en.html" class="button">📂 My Projects</a>
-
-    <p>
-        <a href="https://github.com/Sthonem">GitHub</a> |
-        <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
-        <a href="https://www.instagram.com/erdm__aslan/">Instagram</a>
-    </p>
 
 </body>
 </html>
