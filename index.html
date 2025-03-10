@@ -8,72 +8,81 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 50px;
             background-color: #f9fafc;
-            margin: 0;
-            padding: 20px;
         }
-
-        .language-switch {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        .language-switch img {
-            width: 40px;
-            height: auto;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid #007bff;
-        }
-
-        .content-box {
+        h1 { color: #333; }
+        p { color: #555; }
+        a { color: #007bff; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        .container {
+            max-width: 700px;
+            margin: auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
-            width: 60%;
-            margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-
-        .button {
+        .flag-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .flag-container img {
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
+        }
+        .btn {
             display: inline-block;
-            padding: 10px 20px;
             margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
             color: white;
             background-color: #007bff;
-            text-decoration: none;
+            border: none;
             border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <!-- Dil Seçimi -->
-    <div class="language-switch">
-        <a href="index.html"><img src="tr-flag.png" alt="Türkçe"></a>
-        <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
-    </div>
+<div class="flag-container">
+    <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
+</div>
 
-    <h1>Erdem Aslan</h1>
-    <h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
-    
-    <img src="profile_cropped.jpg" alt="Profil Fotoğrafı" class="profile-img">
-    
-    <p>Kişisel portfolyo web siteme hoş geldiniz!</p>
+<h1>Erdem Aslan</h1>
+<h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
 
-    <div class="content-box">
-        <h2>Hakkımda</h2>
-        <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni yazılım dünyasına yönlendirdi...</p>
-        <a href="certificates.html" class="button">📜 Sertifikalarım</a>
-        <a href="projects.html" class="button">💻 Projelerim</a>
-    </div>
+<img src="profile_cropped.jpg" alt="Profil Resmi" class="profile-pic">
+
+<p>Kişisel portfolyo web siteme hoş geldiniz!</p>
+
+<div class="container">
+    <h2>Hakkımda</h2>
+    <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni yazılım dünyasına yönlendirdi. 8 yaşından itibaren pazarda çalışarak iş hayatına erken yaşta adım attım ve farklı işlerde deneyim kazandım.</p>
+    <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika’da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
+    <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum.</p>
+
+    <a href="certificates.html" class="btn">📜 Sertifikalarım</a>
+    <a href="projects.html" class="btn">💻 Projelerim</a>
+</div>
+
+<p>
+    <a href="https://github.com/erdm_aslan">GitHub</a> |
+    <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
+    <a href="https://www.instagram.com/erdm__aslan/">Instagram</a>
+</p>
 
 </body>
 </html>
