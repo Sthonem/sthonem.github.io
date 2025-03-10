@@ -3,40 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erdem Aslan</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Erdem Aslan - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .flag {
+            width: 40px;
+            height: auto;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .profile-image {
+            width: 150px;
+            border-radius: 50%;
+            margin: 20px 0;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #007bff;
+        }
+    </style>
 </head>
 <body>
-    <header>
+
+    <a href="index.html"><img src="tr-flag.png" alt="Türkçe" class="flag"></a>
+
+    <div class="container">
         <h1>Erdem Aslan</h1>
-        <h2>Computer Engineering Student & Software Developer</h2>
-        <a href="index.html"><img src="tr-flag.png" alt="Türkçe" class="flag"></a>
-    </header>
+        <h3>Computer Engineering Student & Software Developer</h3>
+        
+        <img src="profile_cropped.jpg" alt="Profile Picture" class="profile-image">
+        
+        <p>Welcome to my personal portfolio website!</p>
 
-    <section id="about">
         <h2>About Me</h2>
-        <p>Hello, I am Erdem Aslan. Since a young age, my interest in technology has guided me towards the world of software. 
-        From the age of 8, I started working in the marketplace and gained experience in different jobs.</p>
-        <p>By working in different positions in a factory, I gained experience in work discipline and teamwork. 
-        Later, through the Work and Travel program, I had the opportunity to work in various sectors in the USA and gain experience in a global business environment.</p>
-        <p>Currently, as a computer engineering student, I continue to improve myself in software development, data analysis, and artificial intelligence.</p>
-    </section>
+        <p>Hello, I am Erdem Aslan. Since a young age, my interest in technology has guided me towards software development.
+           As a computer engineering student, I am working on artificial intelligence, data science, and game development. 
+           I have participated in various software projects and volunteer leadership activities.</p>
 
-    <section id="links">
-        <h2>My Links</h2>
-        <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank">LinkedIn</a> |
-        <a href="https://www.instagram.com/erdm__aslan/" target="_blank">Instagram</a> |
-        <a href="https://github.com/erdm-aslan" target="_blank">GitHub</a>
-    </section>
+        <h3>My Links</h3>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/erdm__aslan/" target="_blank">Instagram</a>
+            <a href="https://github.com/erdm-aslan" target="_blank">GitHub</a>
+        </div>
+    </div>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <a href="projects-en.html">View My Projects</a>
-    </section>
-
-    <section id="certificates">
-        <h2>My Certificates</h2>
-        <a href="certificates-en.html">View My Certificates</a>
-    </section>
 </body>
 </html>
