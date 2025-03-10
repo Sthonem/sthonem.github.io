@@ -10,6 +10,7 @@
             text-align: center;
             padding: 50px;
             background-color: #f9fafc;
+            position: relative;
         }
         h1 { color: #333; }
         h3 { color: #444; }
@@ -60,9 +61,29 @@
             margin-top: 20px;
             font-size: 16px;
         }
+
+        /* Dil Seçme Butonu */
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-switch img {
+            width: 30px;
+            cursor: pointer;
+            margin-left: 10px;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
+    <!-- Dil Seçme -->
+    <div class="language-switch">
+        <a href="index.html"><img src="tr-flag.png" alt="Türkçe"></a>
+        <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
+    </div>
+
     <h1>Erdem Aslan</h1>
     <h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
 
