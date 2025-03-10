@@ -10,80 +10,71 @@
             text-align: center;
             background-color: #f9fafc;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         .language-switch {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
         }
 
         .language-switch img {
             width: 40px;
-            height: 25px;
-            margin-left: 10px;
+            height: auto;
             cursor: pointer;
+            margin-left: 10px;
         }
 
-        .container {
-            margin-top: 60px;
-        }
-
-        .project-box {
+        .content-box {
             background: white;
             padding: 20px;
-            margin: 20px auto;
-            width: 60%;
             border-radius: 10px;
+            width: 60%;
+            margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .project {
+            margin: 20px 0;
+        }
+
         .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Dil Seçimi -->
     <div class="language-switch">
-        <a href="projects.html">
-            <img src="turkish-flag.png" alt="Türkçe">
-        </a>
-        <a href="projects-en.html">
-            <img src="us-flag.png" alt="English">
-        </a>
+        <a href="projects.html"><img src="tr-flag.png" alt="Türkçe"></a>
+        <a href="projects-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
-    <div class="container">
-        <h1>Projelerim</h1>
-        
-        <div class="project-box">
-            <h2>🎮 Oyun Skor Takip Sistemi</h2>
-            <p>Yazılım mühendisliği dersi kapsamında bir oyun skor takip web sitesi geliştirdim. Kullanıcılar skorlarını kaydedebilir ve karşılaştırabilir.</p>
-            <a href="https://github.com/Sthonem/GameScoreTracker" target="_blank" class="button">GitHub Repo</a>
+    <h1>🚀 Projelerim</h1>
+
+    <div class="content-box">
+        <h2>🖥️ Geliştirdiğim Projeler</h2>
+
+        <div class="project">
+            <h3>📌 Oyun Skor Takip Web Sitesi</h3>
+            <p>Yazılım mühendisliği dersi için geliştirdiğimiz oyun skorlarını takip eden bir web uygulaması.</p>
         </div>
 
-        <div class="project-box">
-            <h2>🍕 Pizza Dükkanı Yönetim Sistemi</h2>
-            <p>Veritabanı yönetim sistemleri dersi için geliştirdiğim bir sipariş yönetim sistemi.</p>
-            <a href="https://github.com/Sthonem/PizzaManagement" target="_blank" class="button">GitHub Repo</a>
+        <div class="project">
+            <h3>🎮 2D Platform Oyunu</h3>
+            <p>Unity kullanarak geliştirdiğim, düşmanlarla savaşarak prensesi kurtarmaya çalıştığınız bir oyun.</p>
         </div>
-
-        <div class="project-box">
-            <h2>🕹️ 2D Platform Oyunu</h2>
-            <p>Unity kullanarak geliştirdiğim basit bir 2D platform oyunu. Oyuncular altın toplayarak prensesi kurtarmaya çalışıyor.</p>
-            <a href="https://github.com/Sthonem/2DGameProject" target="_blank" class="button">GitHub Repo</a>
-        </div>
-
-        <a href="index.html" class="button">🏠 Ana Sayfaya Dön</a>
     </div>
+
+    <a href="index.html" class="button">🏠 Ana Sayfaya Dön</a>
 
 </body>
 </html>

@@ -10,80 +10,71 @@
             text-align: center;
             background-color: #f9fafc;
             margin: 0;
-            padding: 0;
+            padding: 20px;
         }
 
         .language-switch {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
         }
 
         .language-switch img {
             width: 40px;
-            height: 25px;
-            margin-left: 10px;
+            height: auto;
             cursor: pointer;
+            margin-left: 10px;
         }
 
-        .container {
-            margin-top: 60px;
-        }
-
-        .project-box {
+        .content-box {
             background: white;
             padding: 20px;
-            margin: 20px auto;
-            width: 60%;
             border-radius: 10px;
+            width: 60%;
+            margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
+        .project {
+            margin: 20px 0;
+        }
+
         .button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
             display: inline-block;
-            margin-top: 10px;
+            padding: 10px 20px;
+            margin: 10px;
+            color: white;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
 
+    <!-- Language Selection -->
     <div class="language-switch">
-        <a href="projects.html">
-            <img src="turkish-flag.png" alt="Türkçe">
-        </a>
-        <a href="projects-en.html">
-            <img src="us-flag.png" alt="English">
-        </a>
+        <a href="projects.html"><img src="tr-flag.png" alt="Türkçe"></a>
+        <a href="projects-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
-    <div class="container">
-        <h1>My Projects</h1>
-        
-        <div class="project-box">
-            <h2>🎮 Game Score Tracking System</h2>
-            <p>A web-based system for tracking and comparing game scores, developed as part of my software engineering course.</p>
-            <a href="https://github.com/Sthonem/GameScoreTracker" target="_blank" class="button">GitHub Repo</a>
+    <h1>🚀 My Projects</h1>
+
+    <div class="content-box">
+        <h2>🖥️ Developed Projects</h2>
+
+        <div class="project">
+            <h3>📌 Game Score Tracking Website</h3>
+            <p>A web application we developed for our software engineering course to track game scores.</p>
         </div>
 
-        <div class="project-box">
-            <h2>🍕 Pizza Shop Management System</h2>
-            <p>An order management system developed for my database management systems course.</p>
-            <a href="https://github.com/Sthonem/PizzaManagement" target="_blank" class="button">GitHub Repo</a>
+        <div class="project">
+            <h3>🎮 2D Platformer Game</h3>
+            <p>A game developed using Unity where you fight enemies and rescue a princess.</p>
         </div>
-
-        <div class="project-box">
-            <h2>🕹️ 2D Platformer Game</h2>
-            <p>A simple 2D platformer game developed using Unity, where players collect gold and save a princess.</p>
-            <a href="https://github.com/Sthonem/2DGameProject" target="_blank" class="button">GitHub Repo</a>
-        </div>
-
-        <a href="index-en.html" class="button">🏠 Back to Home</a>
     </div>
+
+    <a href="index-en.html" class="button">🏠 Back to Home</a>
 
 </body>
 </html>
