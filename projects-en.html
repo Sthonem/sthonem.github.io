@@ -8,73 +8,66 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
+            padding: 50px;
             background-color: #f9fafc;
-            margin: 0;
-            padding: 20px;
         }
-
-        .language-switch {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        .language-switch img {
-            width: 40px;
-            height: auto;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .content-box {
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
-            width: 60%;
-            margin: auto;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-
-        .project {
-            margin: 20px 0;
+        h1 { color: #333; }
+        p { color: #555; }
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
         }
-
         .button {
             display: inline-block;
             padding: 10px 20px;
-            margin: 10px;
-            color: white;
+            margin-top: 20px;
             background-color: #007bff;
-            text-decoration: none;
+            color: white;
             border-radius: 5px;
+        }
+        .button img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .language-switch img {
+            width: 30px;
+            margin: 5px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-
-    <!-- Language Selection -->
     <div class="language-switch">
         <a href="projects.html"><img src="tr-flag.png" alt="Türkçe"></a>
-        <a href="projects-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
     <h1>🚀 My Projects</h1>
 
-    <div class="content-box">
-        <h2>🖥️ Developed Projects</h2>
+    <div class="container">
+        <h2>💻 Developed Projects</h2>
 
-        <div class="project">
-            <h3>📌 Game Score Tracking Website</h3>
-            <p>A web application we developed for our software engineering course to track game scores.</p>
-        </div>
+        <h3>📌 Game Score Tracking Website</h3>
+        <p>A web application we developed for our software engineering course to track game scores.</p>
 
-        <div class="project">
-            <h3>🎮 2D Platformer Game</h3>
-            <p>A game developed using Unity where you fight enemies and rescue a princess.</p>
-        </div>
+        <h3>🎮 2D Platformer Game</h3>
+        <p>A game developed using Unity where you fight enemies and rescue a princess.</p>
+
+        <a href="index-en.html" class="button">🏠 Back to Home</a>
     </div>
-
-    <a href="index-en.html" class="button">🏠 Back to Home</a>
-
 </body>
 </html>
