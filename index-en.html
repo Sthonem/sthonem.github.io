@@ -3,65 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erdem Aslan - Portfolio</title>
+    <title>Erdem Aslan | Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa;
+            padding: 50px;
+            background-color: #f9fafc;
         }
+        h1 { color: #333; }
+        p { color: #555; }
+        a { color: #007bff; text-decoration: none; margin: 0 10px; font-weight: bold; }
         .container {
-            width: 80%;
+            max-width: 700px;
             margin: auto;
+            background: white;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        .flag {
-            width: 40px;
-            height: 30px;
+        .flag-container {
             position: absolute;
             top: 20px;
             right: 20px;
+        }
+        .flag-container img {
+            width: 30px;
+            height: 20px;
             cursor: pointer;
+            margin-left: 10px;
         }
-        .profile-image {
+        .profile-pic {
             width: 150px;
+            height: 150px;
             border-radius: 50%;
-            margin: 20px 0;
+            object-fit: cover;
+            border: 4px solid #007bff;
         }
-        .social-links a {
-            margin: 0 10px;
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
             text-decoration: none;
-            font-size: 18px;
-            color: #007bff;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <a href="index.html"><img src="tr-flag.png" alt="Türkçe" class="flag"></a>
+<div class="flag-container">
+    <a href="index.html"><img src="tr-flag.png" alt="Türkçe"></a>
+</div>
 
-    <div class="container">
-        <h1>Erdem Aslan</h1>
-        <h3>Computer Engineering Student & Software Developer</h3>
-        
-        <img src="profile_cropped.jpg" alt="Profile Picture" class="profile-image">
-        
-        <p>Welcome to my personal portfolio website!</p>
+<h1>Erdem Aslan</h1>
+<h3>Computer Engineering Student & Software Developer</h3>
 
-        <h2>About Me</h2>
-        <p>Hello, I am Erdem Aslan. Since a young age, my interest in technology has guided me towards software development.
-           As a computer engineering student, I am working on artificial intelligence, data science, and game development. 
-           I have participated in various software projects and volunteer leadership activities.</p>
+<img src="profile_cropped.jpg" alt="Profile Picture" class="profile-pic">
 
-        <h3>My Links</h3>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank">LinkedIn</a>
-            <a href="https://www.instagram.com/erdm__aslan/" target="_blank">Instagram</a>
-            <a href="https://github.com/Sthonem" target="_blank">GitHub</a>
-        </div>
-    </div>
+<p>Welcome to my personal portfolio website!</p>
+
+<div class="container">
+    <h2>About Me</h2>
+    <p>Hello, I am Erdem Aslan. Since a young age, my interest in technology has guided me towards software development. At the age of 8, I started working in the marketplace, gaining experience in different jobs.</p>
+    <p>I worked in various positions in a factory, developing work discipline and teamwork skills. Later, through the Work and Travel program, I had the opportunity to work in different sectors in the USA and gain experience in an international work environment.</p>
+    <p>Currently, as a computer engineering student, I continue to develop myself in software development, data analysis, and artificial intelligence.</p>
+
+    <a href="certificates-en.html" class="btn">📜 My Certificates</a>
+    <a href="projects-en.html" class="btn">💻 My Projects</a>
+</div>
+
+<p>
+    <a href="https://github.com/erdm_aslan">GitHub</a> |
+    <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
+    <a href="https://www.instagram.com/erdm__aslan/">Instagram</a>
+</p>
 
 </body>
 </html>

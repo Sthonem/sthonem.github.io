@@ -3,76 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sertifikalarım</title>
+    <title>Erdem Aslan | Portfolyo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f8f9fa;
+            padding: 50px;
+            background-color: #f9fafc;
         }
+        h1 { color: #333; }
+        p { color: #555; }
+        a { color: #007bff; text-decoration: none; margin: 0 10px; font-weight: bold; }
         .container {
-            width: 60%;
-            margin: 20px auto;
+            max-width: 700px;
+            margin: auto;
             background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 24px;
-        }
-        .certificate {
-            max-width: 80%;
-            height: auto;
-            margin: 20px 0;
-        }
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .lang-switch {
+        .flag-container {
             position: absolute;
             top: 20px;
             right: 20px;
         }
-        .lang-switch img {
-            width: 40px;
-            height: auto;
+        .flag-container img {
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007bff;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
 
-    <div class="lang-switch">
-        <a href="certificates-en.html">
-            <img src="us-flag.png" alt="English">
-        </a>
-    </div>
+<div class="flag-container">
+    <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
+</div>
 
-    <div class="container">
-        <h1>📜 Sertifikalarım</h1>
-        <h2>📜 Aldığım Sertifikalar</h2>
+<h1>Erdem Aslan</h1>
+<h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
 
-        <img class="certificate" src="1mat.png" alt="MATLAB Onramp Sertifikası">
-        <p><a href="1mat.png">MATLAB Onramp Sertifikası</a></p>
+<img src="profile_cropped.jpg" alt="Profil Resmi" class="profile-pic">
 
-        <img class="certificate" src="2mat.png" alt="Machine Learning Onramp Sertifikası">
-        <p><a href="2mat.png">Machine Learning Onramp Sertifikası</a></p>
+<p>Kişisel portfolyo web siteme hoş geldiniz!</p>
 
-        <img class="certificate" src="3mat.png" alt="Image Processing Onramp Sertifikası">
-        <p><a href="3mat.png">Image Processing Onramp Sertifikası</a></p>
+<div class="container">
+    <h2>Hakkımda</h2>
+    <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni yazılım dünyasına yönlendirdi. 8 yaşından itibaren pazarda çalışarak iş hayatına erken yaşta adım attım ve farklı işlerde deneyim kazandım.</p>
+    <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika’da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
+    <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum.</p>
 
-        <img class="certificate" src="4mat.png" alt="Deep Learning Onramp Sertifikası">
-        <p><a href="4mat.png">Deep Learning Onramp Sertifikası</a></p>
+    <a href="certificates.html" class="btn">📜 Sertifikalarım</a>
+    <a href="projects.html" class="btn">💻 Projelerim</a>
+</div>
 
-        <a href="index.html" class="button">🏠 Ana Sayfaya Dön</a>
-    </div>
+<p>
+    <a href="https://github.com/erdm_aslan">GitHub</a> |
+    <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
+    <a href="https://www.instagram.com/erdm__aslan/">Instagram</a>
+</p>
 
 </body>
 </html>
