@@ -3,37 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Erdem Aslan</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Erdem Aslan | Portfolyo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-switch img {
+            width: 40px;
+            height: 25px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        .container {
+            margin-top: 60px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            object-fit: cover;
+        }
+
+        .about-box {
+            background: white;
+            padding: 20px;
+            margin: 20px auto;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="language-switch">
-            <a href="index-en.html"><img src="us-flag.png" alt="English" class="flag"></a>
-        </div>
-        <h1>Erdem Aslan</h1>
-        <h2>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h2>
-        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-pic">
-        <p>Kişisel portföy web siteme hoş geldiniz!</p>
 
-        <div class="about-section">
-            <h3>Hakkımda</h3>
-            <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni yazılım dünyasına yönlendirdi.</p>
-            <p>8 yaşından itibaren pazarda çalışarak iş hayatına erken yaşta adım attım ve farklı sektörlerde deneyim kazandım.</p>
-            <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika’da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
-            <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum.</p>
-        </div>
-
-        <div class="buttons">
-            <a href="certificates.html" class="button"><img src="certificate-icon.png" class="icon"> Sertifikalarım</a>
-            <a href="projects.html" class="button"><img src="projects-icon.png" class="icon"> Projelerim</a>
-        </div>
-
-        <div class="social-links">
-            <a href="https://github.com/Sthonem" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com/erdm__aslan/" target="_blank">Instagram</a>
-        </div>
+    <div class="language-switch">
+        <a href="index.html">
+            <img src="turkish-flag.png" alt="Türkçe">
+        </a>
+        <a href="index-en.html">
+            <img src="us-flag.png" alt="English">
+        </a>
     </div>
+
+    <div class="container">
+        <h1>Erdem Aslan</h1>
+        <h3>Bilgisayar Mühendisliği Öğrencisi & Yazılım Geliştirici</h3>
+        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-pic">
+        <p>Kişisel portfolyo web siteme hoş geldiniz!</p>
+
+        <div class="about-box">
+            <h2>Hakkımda</h2>
+            <p>Merhaba, ben Erdem Aslan. Küçük yaşlardan itibaren teknolojiye duyduğum ilgi, beni bilgisayar mühendisliği alanına yönlendirdi. 8 yaşından itibaren pazarda çalışarak iş hayatına adım attım ve farklı işlerde deneyim kazandım.</p>
+            <p>Fabrikada farklı pozisyonlarda çalışarak iş disiplini ve ekip çalışmasını deneyimledim. Ardından, Work and Travel programı ile Amerika'da çeşitli sektörlerde çalışarak küresel iş ortamında deneyim kazanma fırsatı yakaladım.</p>
+            <p>Şu anda bilgisayar mühendisliği öğrencisi olarak, yazılım geliştirme, veri analizi ve yapay zeka alanlarında kendimi geliştirmeye devam ediyorum. Teknolojiye olan ilgimle yenilikçi projeler oluşturmayı ve profesyonel kariyerimi şekillendirmeyi hedefliyorum.</p>
+        </div>
+
+        <a href="certificates.html" class="button">📜 Sertifikalarım</a>
+    </div>
+
 </body>
 </html>
