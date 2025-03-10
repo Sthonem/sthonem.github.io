@@ -13,21 +13,6 @@
             padding: 0;
         }
 
-        .container {
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #007bff;
-        }
-
         .language-switch {
             position: absolute;
             top: 20px;
@@ -35,51 +20,70 @@
         }
 
         .language-switch img {
-            width: 30px;
-            height: auto;
-            margin: 5px;
+            width: 40px;
+            height: 25px;
+            margin-left: 10px;
             cursor: pointer;
         }
 
-        .about-section {
+        .container {
+            margin-top: 60px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #007bff;
+            object-fit: cover;
+        }
+
+        .about-box {
             background: white;
             padding: 20px;
-            margin-top: 20px;
+            margin: 20px auto;
+            width: 60%;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+
     <div class="language-switch">
-        <a href="index.html"><img src="turkish-flag.png" alt="Türkçe"></a>
-        <a href="index-en.html"><img src="us-flag.png" alt="English"></a>
+        <a href="index.html">
+            <img src="turkish-flag.png" alt="Türkçe">
+        </a>
+        <a href="index-en.html">
+            <img src="us-flag.png" alt="English">
+        </a>
     </div>
 
     <div class="container">
         <h1>Erdem Aslan</h1>
         <h3>Computer Engineering Student & Software Developer</h3>
-        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-img">
+        <img src="profile_cropped.jpg" alt="Erdem Aslan" class="profile-pic">
         <p>Welcome to my personal portfolio website!</p>
 
-        <div class="about-section">
+        <div class="about-box">
             <h2>About Me</h2>
-            <p>Hello, I am Erdem Aslan. From an early age, my interest in technology led me to the field of computer engineering. 
-            Since the age of 8, I have been working in the marketplace, gaining experience in different jobs.</p>
-
-            <p>I worked in various positions in a factory, developing work discipline and teamwork skills. Later, through the Work and Travel program, 
-            I had the opportunity to work in various sectors in the USA and gained experience in an international work environment.</p>
-
-            <p>Currently, as a computer engineering student, I continue to develop myself in software development, data analysis, and artificial intelligence. 
-            With my passion for technology, I aim to create innovative projects and shape my professional career.</p>
+            <p>Hello, I am Erdem Aslan. From an early age, my interest in technology led me to the field of computer engineering. Since the age of 8, I have been working in the marketplace, gaining experience in different jobs.</p>
+            <p>I worked in various positions in a factory, developing work discipline and teamwork skills. Later, through the Work and Travel program, I had the opportunity to work in various sectors in the USA and gained experience in an international work environment.</p>
+            <p>Currently, as a computer engineering student, I continue to develop myself in software development, data analysis, and artificial intelligence. With my passion for technology, I aim to create innovative projects and shape my professional career.</p>
         </div>
 
-        <p><a href="certificates.html">📜 My Certificates</a></p>
-        <p>
-            <a href="https://github.com/sthonem">GitHub</a> |
-            <a href="https://www.linkedin.com/in/erdem-aslan1/">LinkedIn</a> |
-            <a href="https://instagram.com/erdm__aslan">Instagram</a>
-        </p>
+        <a href="certificates-en.html" class="button">📜 My Certificates</a>
     </div>
+
 </body>
 </html>
