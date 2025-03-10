@@ -3,120 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sertifikalarım | Erdem Aslan</title>
+    <title>Sertifikalarım</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #f9fafc;
             margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            width: 80%;
-            max-width: 800px;
-            margin: auto;
             padding: 20px;
         }
 
         .language-switch {
             position: absolute;
-            top: 20px;
+            top: 10px;
             right: 20px;
-            display: flex;
-            gap: 10px;
         }
 
         .language-switch img {
-            width: 30px;
+            width: 40px;
             height: auto;
             cursor: pointer;
-            border-radius: 5px;
-            border: 1px solid #ddd;
+            margin-left: 10px;
         }
 
-        .certificates-section {
+        .content-box {
             background: white;
             padding: 20px;
-            margin-top: 20px;
             border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin: auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
         .certificate {
-            margin-bottom: 20px;
-            padding: 10px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
 
         .certificate img {
-            width: 100%;
+            width: 80%;
             max-width: 500px;
-            border-radius: 5px;
-            margin-top: 10px;
+            border-radius: 10px;
         }
 
-        .back-button {
-            background-color: #007bff;
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
             color: white;
-            padding: 10px 15px;
+            background-color: #007bff;
             text-decoration: none;
             border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .back-button:hover {
-            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
 
+    <!-- Dil Seçimi -->
     <div class="language-switch">
-        <a href="certificates.html"><img src="turkish-flag.png" alt="Türkçe"></a>
+        <a href="certificates.html"><img src="tr-flag.png" alt="Türkçe"></a>
         <a href="certificates-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
-    <div class="container">
-        <h1>Sertifikalarım</h1>
+    <h1>📜 Sertifikalarım</h1>
+
+    <div class="content-box">
         <h2>📜 Aldığım Sertifikalar</h2>
 
-        <div class="certificates-section">
-            <div class="certificate">
-                <h3>MATLAB Onramp Sertifikası</h3>
-                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&">
-                    <img src="1mat.png" alt="MATLAB Onramp Sertifikası">
-                </a>
-            </div>
-
-            <div class="certificate">
-                <h3>Machine Learning Onramp Sertifikası</h3>
-                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&">
-                    <img src="2mat.png" alt="Machine Learning Onramp Sertifikası">
-                </a>
-            </div>
-
-            <div class="certificate">
-                <h3>Image Processing Onramp Sertifikası</h3>
-                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&">
-                    <img src="3mat.png" alt="Image Processing Onramp Sertifikası">
-                </a>
-            </div>
-
-            <div class="certificate">
-                <h3>Deep Learning Onramp Sertifikası</h3>
-                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&">
-                    <img src="4mat.png" alt="Deep Learning Onramp Sertifikası">
-                </a>
-            </div>
+        <div class="certificate">
+            <img src="1mat.png" alt="MATLAB Onramp Sertifikası">
+            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&" target="_blank">MATLAB Onramp Sertifikası</a></p>
         </div>
 
-        <a href="index.html" class="back-button">⬅ Ana Sayfaya Dön</a>
+        <div class="certificate">
+            <img src="2mat.png" alt="Machine Learning Onramp Sertifikası">
+            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&" target="_blank">Machine Learning Onramp Sertifikası</a></p>
+        </div>
+
+        <div class="certificate">
+            <img src="3mat.png" alt="Image Processing Onramp Sertifikası">
+            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&" target="_blank">Image Processing Onramp Sertifikası</a></p>
+        </div>
+
+        <div class="certificate">
+            <img src="4mat.png" alt="Deep Learning Onramp Sertifikası">
+            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&" target="_blank">Deep Learning Onramp Sertifikası</a></p>
+        </div>
     </div>
+
+    <a href="index.html" class="button">🏠 Ana Sayfaya Dön</a>
 
 </body>
 </html>
