@@ -4,82 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificates</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            background-color: #f9f9f9;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            width: 80%;
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-        img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-        .flag-container {
-            text-align: right;
-            padding: 10px;
-        }
-        .flag-container img {
-            width: 40px;
-            cursor: pointer;
-        }
-        h1 {
-            font-size: 24px;
-        }
-        .cert-link {
-            display: block;
-            font-weight: bold;
-            color: #4a90e2;
-            text-decoration: none;
-            margin-bottom: 20px;
-        }
-        .cert-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="flag-container">
-        <a href="certificates.html"><img src="tr-flag.png" alt="Türkçe"></a>
-    </div>
-
     <div class="container">
-        <h1>📜 My Certificates</h1>
-        <h2>📜 Earned Certificates</h2>
+        <div class="language-switch">
+            <a href="certificates.html">
+                <img src="tr-flag.png" alt="Türkçe" width="40">
+            </a>
+        </div>
+        <h1>📜 <b>My Certificates</b></h1>
+        <h2>📜 <b>Earned Certificates</b></h2>
 
         <div class="certificate">
             <img src="1mat.png" alt="MATLAB Onramp Certificate">
-            <a class="cert-link" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&">MATLAB Onramp Certificate</a>
+            <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&" target="_blank">
+                <b>MATLAB Onramp Certificate</b>
+            </a>
         </div>
 
         <div class="certificate">
             <img src="2mat.png" alt="Machine Learning Onramp Certificate">
-            <a class="cert-link" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&">Machine Learning Onramp Certificate</a>
+            <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&" target="_blank">
+                <b>Machine Learning Onramp Certificate</b>
+            </a>
         </div>
 
         <div class="certificate">
             <img src="3mat.png" alt="Image Processing Onramp Certificate">
-            <a class="cert-link" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&">Image Processing Onramp Certificate</a>
+            <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&" target="_blank">
+                <b>Image Processing Onramp Certificate</b>
+            </a>
         </div>
 
         <div class="certificate">
             <img src="4mat.png" alt="Deep Learning Onramp Certificate">
-            <a class="cert-link" href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&">Deep Learning Onramp Certificate</a>
+            <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&" target="_blank">
+                <b>Deep Learning Onramp Certificate</b>
+            </a>
         </div>
-    </div>
 
+        <a href="index-en.html" class="back-button">🏠 Back to Home</a>
+    </div>
 </body>
 </html>
