@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Certificates</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .certificate {
+            max-width: 80%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        .lang-switch img {
+            width: 40px;
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="language-switch">
+
+    <div class="lang-switch">
         <a href="certificates.html">
-            <img src="tr-flag.png" alt="Türkçe" class="flag">
+            <img src="tr-flag.png" alt="Türkçe">
         </a>
     </div>
 
@@ -17,27 +59,20 @@
         <h1>📜 My Certificates</h1>
         <h2>📜 Earned Certificates</h2>
 
-        <div class="certificate">
-            <img src="1mat.png" alt="MATLAB Onramp Certificate">
-            <a href="#" class="cert-link">MATLAB Onramp Certificate</a>
-        </div>
+        <img class="certificate" src="1mat.png" alt="MATLAB Onramp Certificate">
+        <p><a href="1mat.png">MATLAB Onramp Certificate</a></p>
 
-        <div class="certificate">
-            <img src="2mat.png" alt="Machine Learning Onramp Certificate">
-            <a href="#" class="cert-link">Machine Learning Onramp Certificate</a>
-        </div>
+        <img class="certificate" src="2mat.png" alt="Machine Learning Onramp Certificate">
+        <p><a href="2mat.png">Machine Learning Onramp Certificate</a></p>
 
-        <div class="certificate">
-            <img src="3mat.png" alt="Image Processing Onramp Certificate">
-            <a href="#" class="cert-link">Image Processing Onramp Certificate</a>
-        </div>
+        <img class="certificate" src="3mat.png" alt="Image Processing Onramp Certificate">
+        <p><a href="3mat.png">Image Processing Onramp Certificate</a></p>
 
-        <div class="certificate">
-            <img src="4mat.png" alt="Deep Learning Onramp Certificate">
-            <a href="#" class="cert-link">Deep Learning Onramp Certificate</a>
-        </div>
+        <img class="certificate" src="4mat.png" alt="Deep Learning Onramp Certificate">
+        <p><a href="4mat.png">Deep Learning Onramp Certificate</a></p>
 
-        <a href="index-en.html" class="back-button">🏠 Back to Home</a>
+        <a href="index-en.html" class="button">🏠 Back to Home</a>
     </div>
+
 </body>
 </html>
