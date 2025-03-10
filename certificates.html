@@ -2,95 +2,118 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Sertifikalarım - Erdem Aslan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifikalarım | Erdem Aslan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            padding: 50px;
             background-color: #f9fafc;
+            margin: 0;
+            padding: 0;
         }
-        h1 { color: #333; }
-        p { color: #555; }
-        a { color: #007bff; text-decoration: none; font-weight: bold; }
 
-        /* Sertifikalar Kutusu */
-        .certificates {
+        .container {
+            width: 80%;
             max-width: 800px;
-            margin: 20px auto;
-            text-align: center;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .language-switch img {
+            width: 30px;
+            height: auto;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .certificates-section {
             background: white;
             padding: 20px;
+            margin-top: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Sertifika Kartı */
         .certificate {
-            background: #fff;
-            padding: 15px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            max-width: 600px;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        /* Sertifika Resimleri */
         .certificate img {
             width: 100%;
             max-width: 500px;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            display: block;
-            margin: 0 auto 10px;
+            margin-top: 10px;
         }
 
-        /* Geri Dön Butonu */
         .back-button {
-            display: inline-block;
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
+            padding: 10px 15px;
             text-decoration: none;
             border-radius: 5px;
+            display: inline-block;
             margin-top: 20px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
 <body>
-    <h1>Sertifikalarım</h1>
 
-    <div class="certificates">
-        <h2>📜 Aldığım Sertifikalar</h2>
-
-        <!-- MATLAB Onramp -->
-        <div class="certificate">
-            <img src="1mat.png" alt="MATLAB Onramp Sertifikası">
-            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&" target="_blank">MATLAB Onramp Sertifikası</a></p>
-        </div>
-
-        <!-- Machine Learning Onramp -->
-        <div class="certificate">
-            <img src="2mat.png" alt="Machine Learning Onramp Sertifikası">
-            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&" target="_blank">Machine Learning Onramp Sertifikası</a></p>
-        </div>
-
-        <!-- Image Processing Onramp -->
-        <div class="certificate">
-            <img src="3mat.png" alt="Image Processing Onramp Sertifikası">
-            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&" target="_blank">Image Processing Onramp Sertifikası</a></p>
-        </div>
-
-        <!-- Deep Learning Onramp -->
-        <div class="certificate">
-            <img src="4mat.png" alt="Deep Learning Onramp Sertifikası">
-            <p><a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&" target="_blank">Deep Learning Onramp Sertifikası</a></p>
-        </div>
+    <div class="language-switch">
+        <a href="certificates.html"><img src="turkish-flag.png" alt="Türkçe"></a>
+        <a href="certificates-en.html"><img src="us-flag.png" alt="English"></a>
     </div>
 
-    <p>
-        <a href="index.html" class="back-button">🔙 Ana Sayfaya Dön</a>
-    </p>
+    <div class="container">
+        <h1>Sertifikalarım</h1>
+        <h2>📜 Aldığım Sertifikalar</h2>
+
+        <div class="certificates-section">
+            <div class="certificate">
+                <h3>MATLAB Onramp Sertifikası</h3>
+                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=499d7d7d-1a24-4ef5-843c-37e31fe85f97&">
+                    <img src="1mat.png" alt="MATLAB Onramp Sertifikası">
+                </a>
+            </div>
+
+            <div class="certificate">
+                <h3>Machine Learning Onramp Sertifikası</h3>
+                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0db7390f-25c2-4f40-9886-e41c7bf2cf02&">
+                    <img src="2mat.png" alt="Machine Learning Onramp Sertifikası">
+                </a>
+            </div>
+
+            <div class="certificate">
+                <h3>Image Processing Onramp Sertifikası</h3>
+                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=6e82c15c-c0fc-4f6e-b99d-5aae9bd6403b&">
+                    <img src="3mat.png" alt="Image Processing Onramp Sertifikası">
+                </a>
+            </div>
+
+            <div class="certificate">
+                <h3>Deep Learning Onramp Sertifikası</h3>
+                <a href="https://matlabacademy.mathworks.com/progress/share/certificate.html?id=0a1c3794-d3c1-425b-9e95-54932d4be524&">
+                    <img src="4mat.png" alt="Deep Learning Onramp Sertifikası">
+                </a>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-button">⬅ Ana Sayfaya Dön</a>
+    </div>
+
 </body>
 </html>
