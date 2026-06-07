@@ -1,18 +1,23 @@
-# erdem-aslan.github.io
-📌 Erdem Aslan - Kişisel Portföy Web Sitesi
-Bu repo, Erdem Aslan'ın kişisel portföy web sitesini içermektedir. Site, HTML, CSS ve GitHub Pages kullanılarak oluşturulmuştur.
+# sthonem.github.io
 
-🚀 Canlı Demo: sthomen.github.io
+📌 **Erdem Aslan — Kişisel Portföy / Personal Portfolio**
 
-📌 İçerik
-Hakkımda: Kişisel bilgiler, eğitim ve kariyer hedeflerim
-Sertifikalarım: Aldığım teknik sertifikalar
-Projelerim: Geliştirdiğim projeler
-İletişim Bilgileri: LinkedIn, GitHub, e-posta ve telefon
+Tek sayfalık, çift dilli (TR/EN), modern bir portföy sitesi. Saf HTML, CSS ve vanilla JavaScript ile yazılmıştır — derleme adımı yoktur.
+A single-page, bilingual (TR/EN), modern portfolio site built with plain HTML, CSS and vanilla JavaScript — no build step.
 
-🛠️ Kullanılan Teknolojiler
+🚀 **Canlı / Live:** https://sthonem.github.io
 
-HTML =>	Sayfa yapısını oluşturmak için
-CSS => Tasarım ve stil düzenlemeleri
-GitHub Pages =>	Web sitesini barındırmak için
+## ✨ Özellikler / Features
+- Tek sayfa, akıcı bölümler: Hakkımda · Deneyim · Projeler · Yetenekler · Eğitim · Sertifikalar · İletişim
+- TR/EN dil değişimi (tercih `localStorage`'da saklanır)
+- Koyu "developer" teması, responsive tasarım, mobil menü
+- Scroll animasyonları, typewriter efekti, aktif menü vurgusu
+- `prefers-reduced-motion` desteği, SEO/Open Graph meta etiketleri, inline SVG favicon
 
+## 🗂️ Yapı / Structure
+- `index.html` — sitenin tamamı (HTML + CSS + JS tek dosyada)
+- `*.html` (projects, certificates, *-en) — eski sayfalar, artık `index.html`'e yönlendirir
+- `profile_cropped.jpg`, `*mat.png`, `T3Certificate.png`, `portfolio_qr.png` — görseller
+
+## 🛠️ Teknolojiler / Tech
+HTML · CSS · Vanilla JavaScript · GitHub Pages
