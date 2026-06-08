@@ -13,7 +13,7 @@
   <meta property="og:url" content="https://sthonem.github.io/">
   <meta property="og:image" content="https://sthonem.github.io/profile.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0b0d'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='30' font-weight='700' fill='%2334d399'>EA</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0b0d'/><text x='50%25' y='57%25' dominant-baseline='middle' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='700' letter-spacing='-2' fill='%2334d399'>ea</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -78,8 +78,9 @@
     header.nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
     header.nav.scrolled{background:rgba(10,11,13,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom-color:var(--line-soft)}
     .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-family:var(--f-display);font-weight:600;font-size:1.06rem;letter-spacing:-.01em;color:var(--text);display:flex;align-items:center;gap:10px}
-    .brand .mark{width:30px;height:30px;border-radius:9px;background:var(--accent-soft);border:1px solid var(--accent-line);color:var(--accent);display:grid;place-items:center;font-size:.82rem;font-weight:700;font-family:var(--f-mono)}
+    .brand{font-family:var(--f-display);font-weight:600;font-size:1.2rem;letter-spacing:-.035em;color:var(--text);text-transform:lowercase;white-space:nowrap;transition:opacity .2s}
+    .brand:hover{opacity:.8}
+    .brand .dot{color:var(--accent)}
     .nav-menu{display:flex;align-items:center;gap:4px}
     .nav-menu a{font-family:var(--f-mono);font-size:.84rem;color:var(--text-2);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
     .nav-menu a:hover{color:var(--text)}
@@ -270,7 +271,7 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand"><span class="mark">EA</span>Erdem Aslan</a>
+      <a href="#top" class="brand" aria-label="Erdem Aslan — home">erdem aslan<span class="dot">.</span></a>
       <nav class="nav-menu" id="navMenu">
         <a href="#about"><span class="t-tr">Hakkımda</span><span class="t-en">About</span></a>
         <a href="#experience"><span class="t-tr">Deneyim</span><span class="t-en">Experience</span></a>
@@ -378,11 +379,8 @@
             <div class="xp-role"><span class="t-tr">Full-Stack Geliştirici Stajyeri</span><span class="t-en">Full-Stack Developer Intern</span></div>
             <div class="xp-org">Proceedit Trading · <span class="t-tr">YZ destekli algoritmik trading &amp; piyasa analizi (fintech)</span><span class="t-en">AI-driven trading automation &amp; market analysis (fintech)</span></div>
             <ul class="xp-list">
-              <li><span class="t-tr">Python (Flask) ve PostgreSQL ile backend API bileşenleri geliştirdim; REST endpoint'leri ve veritabanı entegrasyonlarıyla sistemin veri akışını ve güvenilirliğini iyileştirdim.</span><span class="t-en">Built backend API components with Python (Flask) and PostgreSQL; REST endpoints and database integrations that improved the system's data flow and reliability.</span></li>
-              <li><span class="t-tr">AWS ve Kubernetes ortamlarında pod ve servis yönetimi gerçekleştirerek geliştirme, hata ayıklama ve backend test süreçlerini hızlandırdım.</span><span class="t-en">Managed pod and service operations on AWS and Kubernetes, accelerating development, debugging and backend testing.</span></li>
-              <li><span class="t-tr">Finansal zaman serisi verisi üzerinde YZ destekli algoritmik modelleme çalışmalarına katıldım; CatBoost ve LSTM tabanlı modellerin üretim ortamındaki performans analizine katkı sağladım.</span><span class="t-en">Contributed to AI-driven algorithmic modelling on financial time-series data, supporting the production performance analysis of CatBoost- and LSTM-based models.</span></li>
-              <li><span class="t-tr">JIRA üzerinden sprint görevlerini yönettim, Google Meet ile uluslararası ekiple koordinasyon sağladım; Agile törenlerine aktif katılarak teslimat hızını artırdım.</span><span class="t-en">Managed sprint tasks via JIRA and coordinated with an international team over Google Meet, taking an active role in Agile ceremonies to improve delivery speed.</span></li>
-              <li><span class="t-tr">FlutterFlow ve Figma ile platformlar arası mobil arayüz prototipleri oluşturdum; kullanıcı deneyimini iyileştiren tasarım çözümleri geliştirdim.</span><span class="t-en">Prototyped cross-platform mobile interfaces with FlutterFlow and Figma, developing design solutions that enhanced the user experience.</span></li>
+              <li><span class="t-tr">Python/Flask + PostgreSQL backend (REST API'ler, DB entegrasyonları); AWS &amp; Kubernetes'te servis yönetimi.</span><span class="t-en">Python/Flask + PostgreSQL backend (REST APIs, DB integrations); service ops on AWS &amp; Kubernetes.</span></li>
+              <li><span class="t-tr">Finansal zaman serilerinde CatBoost &amp; LSTM modellerinin üretim performans analizi; Agile/JIRA ile uluslararası ekip.</span><span class="t-en">Production performance analysis of CatBoost &amp; LSTM models on financial time-series; Agile/JIRA in an international team.</span></li>
             </ul>
           </div>
         </div>
@@ -392,9 +390,7 @@
             <div class="xp-role"><span class="t-tr">iOS Uygulama Geliştirici Stajyeri</span><span class="t-en">iOS Developer Intern</span></div>
             <div class="xp-org">Lideatech · <span class="t-tr">mobil & yazılım geliştirme</span><span class="t-en">mobile &amp; software development</span></div>
             <ul class="xp-list">
-              <li><span class="t-tr">Swift/SwiftUI ve Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim; Firestore entegrasyonu ve kimlik doğrulamayla güvenli, gerçek zamanlı veri akışı sağladım.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI and Firebase; secure, real-time data flow via Firestore integration and user authentication.</span></li>
-              <li><span class="t-tr">Gelir/gider takibi, bütçe analizi ve veri görselleştirme özelliklerini modern iOS pratikleriyle hayata geçirdim; interaktif dashboard'larla kullanıcı deneyimini iyileştirdim.</span><span class="t-en">Shipped income/expense tracking, budget analysis and data-visualization features with modern iOS practices, improving UX through interactive dashboards.</span></li>
-              <li><span class="t-tr">MVVM mimarisi benimseyerek modüler ve sürdürülebilir bir kod tabanı kurdum; uygulamanın uzun vadeli ölçeklenebilirliğini güvence altına aldım.</span><span class="t-en">Adopted an MVVM architecture for a modular, maintainable codebase, ensuring the app's long-term scalability.</span></li>
+              <li><span class="t-tr">Swift/SwiftUI + Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim — MVVM, Firestore + auth, bütçe analizi ve interaktif dashboard'lar.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI + Firebase — MVVM, Firestore + auth, budgeting and interactive dashboards.</span></li>
             </ul>
           </div>
         </div>
@@ -404,8 +400,7 @@
             <div class="xp-role"><span class="t-tr">Oyun Operatörü &amp; Aşçı</span><span class="t-en">Game Operator &amp; Cook</span></div>
             <div class="xp-org">Morey's Piers</div>
             <ul class="xp-list">
-              <li><span class="t-tr">ABD'de uluslararası iş deneyimi; hızla değişen ortama uyum sağlayarak operasyonel sürekliliğe katkı.</span><span class="t-en">International work experience in the US; adapted to a fast-changing environment to keep operations running.</span></li>
-              <li><span class="t-tr">Farklı kültürlerden ekiplerle çalışarak İngilizce iletişimimi ve kültürel farkındalığımı geliştirdim.</span><span class="t-en">Improved my English communication and cultural awareness within multicultural teams.</span></li>
+              <li><span class="t-tr">ABD'de Work &amp; Travel; çok kültürlü ekipte hızlı uyum, operasyonel süreklilik ve ileri düzey İngilizce iletişim.</span><span class="t-en">Work &amp; Travel in the US; fast adaptation, operational continuity and advanced English in a multicultural team.</span></li>
             </ul>
           </div>
         </div>
