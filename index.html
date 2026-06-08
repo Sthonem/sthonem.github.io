@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en" class="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Erdem Aslan — Yazılım & Yapay Zeka Mühendisi</title>
-  <meta name="description" content="Erdem Aslan — Bilgisayar Mühendisliği son sınıf öğrencisi. Yapay Zeka / LLM sistemleri, ölçeklenebilir backend ve bulut/DevOps. Projeler, deneyim, sertifikalar.">
+  <title>Erdem Aslan — Software & AI Engineer</title>
+  <meta name="description" content="Erdem Aslan — Final-year Computer Engineering student. AI / LLM systems, scalable backends and cloud/DevOps. Projects, experience and certificates.">
   <meta name="author" content="Erdem Aslan">
   <meta name="theme-color" content="#0a0b0d">
   <meta property="og:type" content="website">
@@ -767,7 +767,7 @@
         langBtns.forEach(function(b){b.textContent=en?'TR':'EN';});
         var cv=document.getElementById('cvBtn');if(cv)cv.href=en?'Erdem-Aslan-CV-EN.pdf':'Erdem-Aslan-CV-TR.pdf';
       }
-      try{if(localStorage.getItem('lang')==='en')root.classList.add('en');}catch(e){}
+      try{if(localStorage.getItem('lang')==='tr')root.classList.remove('en');}catch(e){}
       applyLang();
       langBtns.forEach(function(b){b.addEventListener('click',function(){root.classList.toggle('en');try{localStorage.setItem('lang',root.classList.contains('en')?'en':'tr');}catch(e){}applyLang();});});
 
