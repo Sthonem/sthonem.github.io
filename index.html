@@ -164,6 +164,14 @@
     .xp-list{list-style:none;display:flex;flex-direction:column;gap:9px}
     .xp-list li{position:relative;padding-left:20px;color:var(--text-2);font-size:.96rem}
     .xp-list li::before{content:"";position:absolute;left:0;top:11px;width:7px;height:1px;background:var(--accent)}
+    .sec-head.xp-head{max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+    .xp-toggle{display:inline-flex;gap:4px;background:var(--bg-2);border:1px solid var(--line);border-radius:11px;padding:4px;flex-shrink:0}
+    .xpt{font-family:var(--f-mono);font-size:.78rem;color:var(--text-2);background:none;border:0;padding:7px 14px;border-radius:8px;cursor:pointer;transition:background .2s,color .2s}
+    .xpt.active{background:var(--accent-soft);color:var(--accent)}
+    .xpt:hover:not(.active){color:var(--text)}
+    .xp-list li.d{display:none}
+    .xp.detailed .xp-list li.s{display:none}
+    .xp.detailed .xp-list li.d{display:list-item}
 
     /* projects */
     .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
@@ -368,9 +376,15 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="wrap">
-      <div class="sec-head reveal">
-        <div class="eyebrow"><span class="num">02</span><span class="t-tr">Deneyim</span><span class="t-en">Experience</span></div>
-        <h2 class="title"><span class="t-tr">İş Deneyimi</span><span class="t-en">Work Experience</span></h2>
+      <div class="sec-head reveal xp-head">
+        <div>
+          <div class="eyebrow"><span class="num">02</span><span class="t-tr">Deneyim</span><span class="t-en">Experience</span></div>
+          <h2 class="title"><span class="t-tr">İş Deneyimi</span><span class="t-en">Work Experience</span></h2>
+        </div>
+        <div class="xp-toggle" role="group" aria-label="View mode">
+          <button class="xpt active" data-xp="summary"><span class="t-tr">Özet</span><span class="t-en">Summary</span></button>
+          <button class="xpt" data-xp="detail"><span class="t-tr">Detaylı</span><span class="t-en">Detailed</span></button>
+        </div>
       </div>
       <div class="xp">
         <div class="xp-item reveal">
@@ -379,8 +393,13 @@
             <div class="xp-role"><span class="t-tr">Full-Stack Geliştirici Stajyeri</span><span class="t-en">Full-Stack Developer Intern</span></div>
             <div class="xp-org">Proceedit Trading · <span class="t-tr">YZ destekli algoritmik trading &amp; piyasa analizi (fintech)</span><span class="t-en">AI-driven trading automation &amp; market analysis (fintech)</span></div>
             <ul class="xp-list">
-              <li><span class="t-tr">Python/Flask + PostgreSQL backend (REST API'ler, DB entegrasyonları); AWS &amp; Kubernetes'te servis yönetimi.</span><span class="t-en">Python/Flask + PostgreSQL backend (REST APIs, DB integrations); service ops on AWS &amp; Kubernetes.</span></li>
-              <li><span class="t-tr">Finansal zaman serilerinde CatBoost &amp; LSTM modellerinin üretim performans analizi; Agile/JIRA ile uluslararası ekip.</span><span class="t-en">Production performance analysis of CatBoost &amp; LSTM models on financial time-series; Agile/JIRA in an international team.</span></li>
+              <li class="s"><span class="t-tr">Python/Flask + PostgreSQL backend (REST API'ler, DB entegrasyonları); AWS &amp; Kubernetes'te servis yönetimi.</span><span class="t-en">Python/Flask + PostgreSQL backend (REST APIs, DB integrations); service ops on AWS &amp; Kubernetes.</span></li>
+              <li class="s"><span class="t-tr">Finansal zaman serilerinde CatBoost &amp; LSTM modellerinin üretim performans analizi; Agile/JIRA ile uluslararası ekip.</span><span class="t-en">Production performance analysis of CatBoost &amp; LSTM models on financial time-series; Agile/JIRA in an international team.</span></li>
+              <li class="d"><span class="t-tr">Python (Flask) ve PostgreSQL ile backend API bileşenleri geliştirdim; REST endpoint'leri ve veritabanı entegrasyonlarıyla sistemin veri akışını ve güvenilirliğini iyileştirdim.</span><span class="t-en">Built backend API components with Python (Flask) and PostgreSQL; REST endpoints and database integrations that improved the system's data flow and reliability.</span></li>
+              <li class="d"><span class="t-tr">AWS ve Kubernetes ortamlarında pod ve servis yönetimi gerçekleştirerek geliştirme, hata ayıklama ve backend test süreçlerini hızlandırdım.</span><span class="t-en">Managed pod and service operations on AWS and Kubernetes, accelerating development, debugging and backend testing.</span></li>
+              <li class="d"><span class="t-tr">Finansal zaman serisi verisi üzerinde YZ destekli algoritmik modelleme çalışmalarına katıldım; CatBoost ve LSTM tabanlı modellerin üretim ortamındaki performans analizine katkı sağladım.</span><span class="t-en">Contributed to AI-driven algorithmic modelling on financial time-series data, supporting the production performance analysis of CatBoost- and LSTM-based models.</span></li>
+              <li class="d"><span class="t-tr">JIRA üzerinden sprint görevlerini yönettim, Google Meet ile uluslararası ekiple koordinasyon sağladım; Agile törenlerine aktif katılarak teslimat hızını artırdım.</span><span class="t-en">Managed sprint tasks via JIRA and coordinated with an international team over Google Meet, taking an active role in Agile ceremonies to improve delivery speed.</span></li>
+              <li class="d"><span class="t-tr">FlutterFlow ve Figma ile platformlar arası mobil arayüz prototipleri oluşturdum; kullanıcı deneyimini iyileştiren tasarım çözümleri geliştirdim.</span><span class="t-en">Prototyped cross-platform mobile interfaces with FlutterFlow and Figma, developing design solutions that enhanced the user experience.</span></li>
             </ul>
           </div>
         </div>
@@ -390,7 +409,10 @@
             <div class="xp-role"><span class="t-tr">iOS Uygulama Geliştirici Stajyeri</span><span class="t-en">iOS Developer Intern</span></div>
             <div class="xp-org">Lideatech · <span class="t-tr">mobil & yazılım geliştirme</span><span class="t-en">mobile &amp; software development</span></div>
             <ul class="xp-list">
-              <li><span class="t-tr">Swift/SwiftUI + Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim — MVVM, Firestore + auth, bütçe analizi ve interaktif dashboard'lar.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI + Firebase — MVVM, Firestore + auth, budgeting and interactive dashboards.</span></li>
+              <li class="s"><span class="t-tr">Swift/SwiftUI + Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim — MVVM, Firestore + auth, bütçe analizi ve interaktif dashboard'lar.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI + Firebase — MVVM, Firestore + auth, budgeting and interactive dashboards.</span></li>
+              <li class="d"><span class="t-tr">Swift/SwiftUI ve Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim; Firestore entegrasyonu ve kimlik doğrulamayla güvenli, gerçek zamanlı veri akışı sağladım.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI and Firebase; secure, real-time data flow via Firestore integration and user authentication.</span></li>
+              <li class="d"><span class="t-tr">Gelir/gider takibi, bütçe analizi ve veri görselleştirme özelliklerini modern iOS pratikleriyle hayata geçirdim; interaktif dashboard'larla kullanıcı deneyimini iyileştirdim.</span><span class="t-en">Shipped income/expense tracking, budget analysis and data-visualization features with modern iOS practices, improving UX through interactive dashboards.</span></li>
+              <li class="d"><span class="t-tr">MVVM mimarisi benimseyerek modüler ve sürdürülebilir bir kod tabanı kurdum; uygulamanın uzun vadeli ölçeklenebilirliğini güvence altına aldım.</span><span class="t-en">Adopted an MVVM architecture for a modular, maintainable codebase, ensuring the app's long-term scalability.</span></li>
             </ul>
           </div>
         </div>
@@ -400,7 +422,9 @@
             <div class="xp-role"><span class="t-tr">Oyun Operatörü &amp; Aşçı</span><span class="t-en">Game Operator &amp; Cook</span></div>
             <div class="xp-org">Morey's Piers</div>
             <ul class="xp-list">
-              <li><span class="t-tr">ABD'de Work &amp; Travel; çok kültürlü ekipte hızlı uyum, operasyonel süreklilik ve ileri düzey İngilizce iletişim.</span><span class="t-en">Work &amp; Travel in the US; fast adaptation, operational continuity and advanced English in a multicultural team.</span></li>
+              <li class="s"><span class="t-tr">ABD'de Work &amp; Travel; çok kültürlü ekipte hızlı uyum, operasyonel süreklilik ve ileri düzey İngilizce iletişim.</span><span class="t-en">Work &amp; Travel in the US; fast adaptation, operational continuity and advanced English in a multicultural team.</span></li>
+              <li class="d"><span class="t-tr">ABD'de uluslararası iş deneyimi; hızla değişen ortama uyum sağlayarak operasyonel sürekliliğe katkı.</span><span class="t-en">International work experience in the US; adapted to a fast-changing environment to keep operations running.</span></li>
+              <li class="d"><span class="t-tr">Farklı kültürlerden ekiplerle çalışarak İngilizce iletişimimi ve kültürel farkındalığımı geliştirdim.</span><span class="t-en">Improved my English communication and cultural awareness within multicultural teams.</span></li>
             </ul>
           </div>
         </div>
@@ -772,6 +796,9 @@
       var navToggle=document.getElementById('navToggle'),navMenu=document.getElementById('navMenu');
       navToggle.addEventListener('click',function(){navMenu.classList.toggle('open');});
       navMenu.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){navMenu.classList.remove('open');});});
+
+      var xpts=document.querySelectorAll('.xpt'),xpWrap=document.querySelector('.xp');
+      xpts.forEach(function(b){b.addEventListener('click',function(){xpts.forEach(function(x){x.classList.remove('active');});b.classList.add('active');if(xpWrap)xpWrap.classList.toggle('detailed',b.dataset.xp==='detail');});});
 
       var nav=document.getElementById('nav');
       function onScroll(){nav.classList.toggle('scrolled',window.scrollY>14);}
