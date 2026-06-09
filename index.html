@@ -85,8 +85,8 @@
     header.nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
     header.nav.scrolled{background:rgba(10,11,13,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom-color:var(--line-soft)}
     .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-family:var(--f-display);font-weight:600;font-size:1.2rem;letter-spacing:-.035em;color:var(--text);text-transform:lowercase;white-space:nowrap;transition:opacity .2s;display:inline-flex;align-items:center;gap:9px}
-    .brand-mark{height:26px;width:auto;display:block}
+    .brand{display:inline-flex;align-items:center;transition:opacity .2s}
+    .brand-mark{height:38px;width:auto;display:block}
     .brand:hover{opacity:.8}
     .brand .dot{color:var(--accent)}
     .nav-menu{display:flex;align-items:center;gap:4px}
@@ -184,6 +184,9 @@
     /* projects */
     .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
     .pcard{position:relative;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:transform .24s,border-color .24s,box-shadow .24s;overflow:hidden}
+    .p-thumb{margin:-26px -26px 18px;border-bottom:1px solid var(--line);aspect-ratio:16/10;overflow:hidden;background:var(--bg)}
+    .p-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s}
+    .pcard:hover .p-thumb img{transform:scale(1.03)}
     .pcard::before{content:"";position:absolute;inset:0 0 auto 0;height:1px;background:linear-gradient(90deg,transparent,var(--accent-line),transparent);opacity:0;transition:opacity .3s}
     .pcard:hover{transform:translateY(-5px);border-color:var(--accent-line);box-shadow:0 26px 56px -30px var(--glow)}
     .pcard:hover::before{opacity:1}
@@ -287,7 +290,7 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand" aria-label="Erdem Aslan — home"><img class="brand-mark" src="logo-ea-white.png" alt="">erdem aslan<span class="dot">.</span></a>
+      <a href="#top" class="brand" aria-label="Erdem Aslan — home"><img class="brand-mark" src="logo-ea-white.png" alt="Erdem Aslan"></a>
       <nav class="nav-menu" id="navMenu">
         <a href="#about"><span class="t-tr">Hakkımda</span><span class="t-en">About</span></a>
         <a href="#experience"><span class="t-tr">Deneyim</span><span class="t-en">Experience</span></a>
@@ -510,6 +513,7 @@
 
         <!-- Erasmus Buddy -->
         <article class="pcard reveal">
+          <div class="p-thumb"><img src="proj-erasmus.jpg" alt="Erasmus Buddy preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3178c6"></span>TypeScript</span><span class="p-year">2026</span></div>
           <h3>Erasmus Buddy</h3>
           <p><span class="t-tr">Gdańsk Teknoloji Üniversitesi'ndeki Erasmus öğrencileri için mobil öncelikli bir web uygulaması — yeni gelenlerin şehre ve üniversiteye uyumunu kolaylaştırır.</span><span class="t-en">A mobile-first web app for Erasmus students at Gdańsk University of Technology — helping newcomers settle into the city and the university.</span></p>
@@ -522,6 +526,7 @@
 
         <!-- AntennaLab -->
         <article class="pcard reveal">
+          <div class="p-thumb"><img src="proj-antennalab.jpg" alt="AntennaLab preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#f1e05a"></span>JavaScript</span><span class="p-year">2026</span></div>
           <h3>AntennaLab</h3>
           <p><span class="t-tr">Modüler analitik RF anten hesaplayıcısı: hesap motoru + Streamlit arayüzü + FastAPI servisi + web arayüzü. MVP tamamlandı ve Balanis referansıyla doğrulandı.</span><span class="t-en">A modular analytical RF antenna calculator: compute engine + Streamlit UI + FastAPI service + web frontend. MVP completed and validated against Balanis.</span></p>
@@ -580,6 +585,7 @@
 
         <!-- StockMind -->
         <article class="pcard reveal">
+          <div class="p-thumb"><img src="proj-stockmind.jpg" alt="StockMind dashboard preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3776ab"></span>Python</span><span class="p-year">2025</span></div>
           <h3>StockMind</h3>
           <p><span class="t-tr">YZ destekli risk skorlamasıyla kişisel hisse senedi portföy analiz aracı.</span><span class="t-en">A personal stock-portfolio analysis tool with AI-powered risk scoring.</span></p>
