@@ -13,7 +13,8 @@
   <meta property="og:url" content="https://sthonem.github.io/">
   <meta property="og:image" content="https://sthonem.github.io/profile.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%230a0b0d'/><text x='50%25' y='57%25' dominant-baseline='middle' text-anchor='middle' font-family='Helvetica,Arial,sans-serif' font-size='34' font-weight='700' letter-spacing='-2' fill='%2334d399'>ea</text></svg>">
+  <link rel="icon" href="logo-favicon.png">
+  <link rel="apple-touch-icon" href="logo-favicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +30,11 @@
       --text:#eceef1;
       --text-2:#a2a9b4;
       --text-3:#6a7280;
-      --accent:#34d399;
-      --accent-2:#5eead4;
-      --accent-soft:rgba(52,211,153,.12);
-      --accent-line:rgba(52,211,153,.28);
-      --glow:rgba(52,211,153,.22);
+      --accent:#1ec8d6;
+      --accent-2:#5fe0ea;
+      --accent-soft:rgba(30,200,214,.12);
+      --accent-line:rgba(30,200,214,.28);
+      --glow:rgba(30,200,214,.22);
       --maxw:1140px;
       --pad:24px;
       --r:18px;
@@ -47,8 +48,8 @@
       font-family:var(--f-sans);background:var(--bg);color:var(--text);
       line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;
       background-image:
-        radial-gradient(680px 480px at 82% -5%, rgba(52,211,153,.07), transparent 70%),
-        radial-gradient(560px 420px at -8% 12%, rgba(94,234,212,.045), transparent 70%);
+        radial-gradient(680px 480px at 82% -5%, rgba(30,200,214,.07), transparent 70%),
+        radial-gradient(560px 420px at -8% 12%, rgba(95,224,234,.045), transparent 70%);
       background-attachment:fixed;
     }
     /* language swap */
@@ -78,7 +79,8 @@
     header.nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:background .3s,border-color .3s,backdrop-filter .3s;border-bottom:1px solid transparent}
     header.nav.scrolled{background:rgba(10,11,13,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom-color:var(--line-soft)}
     .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:18px}
-    .brand{font-family:var(--f-display);font-weight:600;font-size:1.2rem;letter-spacing:-.035em;color:var(--text);text-transform:lowercase;white-space:nowrap;transition:opacity .2s}
+    .brand{font-family:var(--f-display);font-weight:600;font-size:1.2rem;letter-spacing:-.035em;color:var(--text);text-transform:lowercase;white-space:nowrap;transition:opacity .2s;display:inline-flex;align-items:center;gap:9px}
+    .brand-mark{height:26px;width:auto;display:block}
     .brand:hover{opacity:.8}
     .brand .dot{color:var(--accent)}
     .nav-menu{display:flex;align-items:center;gap:4px}
@@ -87,7 +89,7 @@
     .nav-menu a.active{color:var(--accent)}
     .nav-right{display:flex;align-items:center;gap:10px}
     .lang-btn{font-family:var(--f-mono);font-weight:500;font-size:.8rem;color:var(--accent);background:var(--accent-soft);border:1px solid var(--accent-line);padding:7px 13px;border-radius:9px;cursor:pointer;letter-spacing:.06em;transition:background .2s,transform .15s}
-    .lang-btn:hover{background:rgba(52,211,153,.18);transform:translateY(-1px)}
+    .lang-btn:hover{background:rgba(30,200,214,.18);transform:translateY(-1px)}
     .nav-toggle{display:none;background:none;border:0;cursor:pointer;padding:6px}
     .nav-toggle span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:.25s}
 
@@ -99,7 +101,7 @@
     .pulse i{position:absolute;inset:0;border-radius:50%;background:var(--accent)}
     .pulse i::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:ring 2.4s ease-out infinite}
     @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.4);opacity:0}}
-    .hero h1{font-family:var(--f-display);font-size:clamp(2.9rem,7vw,5rem);font-weight:600;line-height:1.02;letter-spacing:-.035em;margin-bottom:20px}
+    .hero h1{font-family:var(--f-display);font-size:clamp(3.2rem,9vw,6.2rem);font-weight:600;line-height:1;letter-spacing:-.04em;margin-bottom:20px}
     .hero h1 .accent{color:var(--accent)}
     .role{font-family:var(--f-mono);font-size:clamp(1rem,2.4vw,1.32rem);color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;min-height:1.6em}
     .role .arrow{color:var(--accent)}
@@ -279,7 +281,7 @@
   <!-- NAV -->
   <header class="nav" id="nav">
     <div class="nav-inner">
-      <a href="#top" class="brand" aria-label="Erdem Aslan — home">erdem aslan<span class="dot">.</span></a>
+      <a href="#top" class="brand" aria-label="Erdem Aslan — home"><img class="brand-mark" src="logo-ea-white.png" alt="">erdem aslan<span class="dot">.</span></a>
       <nav class="nav-menu" id="navMenu">
         <a href="#about"><span class="t-tr">Hakkımda</span><span class="t-en">About</span></a>
         <a href="#experience"><span class="t-tr">Deneyim</span><span class="t-en">Experience</span></a>
@@ -303,8 +305,8 @@
         <h1>Erdem<br>Aslan<span class="accent">.</span></h1>
         <div class="role"><span class="arrow">›</span><span class="typed"></span></div>
         <p class="lede">
-          <span class="t-tr"><b>Bilgisayar Mühendisliği son sınıf</b> öğrencisiyim. Yapay zeka & LLM sistemleri, ölçeklenebilir backend ve bulut/DevOps üzerine çalışıyor; fikirden üretime gerçek ürünler geliştiriyorum.</span>
-          <span class="t-en"><b>Final-year Computer Engineering</b> student building AI & LLM systems, scalable backends and cloud/DevOps — turning ideas into real, shipped products.</span>
+          <span class="t-tr"><b>Bilgisayar Mühendisliği son sınıf</b> öğrencisiyim; <b>yapay zeka / LLM, bilgisayarlı görü &amp; uzaktan algılama</b> ve full-stack üzerine çalışıyorum — araştırmayı gerçek, yayımlanan ürünlere dönüştürüyorum.</span>
+          <span class="t-en"><b>Final-year Computer Engineering</b> student working across <b>AI / LLMs, computer vision &amp; remote sensing</b>, and full-stack — turning research into real, shipped products.</span>
         </p>
         <div class="hero-meta">
           <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>Gdańsk, PL</span>
@@ -754,12 +756,7 @@
       <div class="contact-row">
         <a href="mailto:erdemaslan1003@gmail.com" class="btn btn-primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg>erdemaslan1003@gmail.com</a>
         <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank" rel="noopener" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 002.48 2.5A2.5 2.5 0 007.5 6a2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.03-3.34-2.03 0-2.34 1.58-2.34 3.23V21h-4z"/></svg>LinkedIn</a>
-      </div>
-      <div class="qr">
-        <img src="portfolio_qr.png" alt="Portfolio QR" loading="lazy">
-        <small><span class="t-tr">↑ sayfayı paylaş</span><span class="t-en">↑ scan to share</span></small>
-      </div>
-    </div>
+      </div>    </div>
   </section>
 
   <!-- FOOTER -->
@@ -769,9 +766,7 @@
       <div class="social">
         <a href="https://github.com/Sthonem" target="_blank" rel="noopener" class="icon-link" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg></a>
         <a href="https://www.linkedin.com/in/erdem-aslan1/" target="_blank" rel="noopener" class="icon-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 002.5 6a2.5 2.5 0 002.48 2.5A2.5 2.5 0 007.5 6a2.5 2.5 0 00-2.52-2.5zM3 9h4v12H3zM10 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C21.4 8.65 22 11 22 14.1V21h-4v-6.1c0-1.46-.03-3.34-2.03-3.34-2.03 0-2.34 1.58-2.34 3.23V21h-4z"/></svg></a>
-        <a href="https://www.kaggle.com/sthonem" target="_blank" rel="noopener" class="icon-link" aria-label="Kaggle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358z"/></svg></a>
-        <a href="https://www.instagram.com/aslanerdeem/" target="_blank" rel="noopener" class="icon-link" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-        <a href="mailto:erdemaslan1003@gmail.com" class="icon-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg></a>
+        <a href="https://www.kaggle.com/sthonem" target="_blank" rel="noopener" class="icon-link" aria-label="Kaggle"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.825 23.859c-.022.092-.117.141-.281.141h-3.139c-.187 0-.351-.082-.492-.248l-5.178-6.589-1.448 1.374v5.111c0 .235-.117.352-.351.352H5.505c-.236 0-.354-.117-.354-.352V.353c0-.233.118-.353.354-.353h2.431c.234 0 .351.12.351.353v14.343l6.203-6.272c.165-.165.33-.246.495-.246h3.239c.144 0 .236.06.285.18.046.149.034.255-.036.315l-6.555 6.344 6.836 8.507c.095.104.117.208.07.358z"/></svg></a>        <a href="mailto:erdemaslan1003@gmail.com" class="icon-link" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7L22 6"/></svg></a>
       </div>
     </div>
   </footer>
