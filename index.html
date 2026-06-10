@@ -88,7 +88,7 @@
     .brand{display:inline-flex;align-items:center;transition:opacity .2s}
     .brand-mark{height:38px;width:auto;display:block}
     .brand:hover{opacity:.8}
-    .brand .dot{color:var(--accent)}
+    :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
     .nav-menu{display:flex;align-items:center;gap:4px}
     .nav-menu a{font-family:var(--f-mono);font-size:.84rem;color:var(--text-2);padding:8px 12px;border-radius:8px;transition:color .2s,background .2s}
     .nav-menu a:hover{color:var(--text)}
@@ -248,9 +248,6 @@
     .contact .big a:hover{opacity:.85}
     .contact .sub{color:var(--text-2);max-width:540px;margin:0 auto 36px;font-size:1.06rem}
     .contact-row{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-    .qr{margin-top:48px;display:inline-flex;flex-direction:column;align-items:center;gap:11px}
-    .qr img{width:96px;height:96px;border-radius:12px;border:1px solid var(--line);background:#fff;padding:7px}
-    .qr small{font-family:var(--f-mono);font-size:.72rem;color:var(--text-3)}
 
     /* footer */
     footer{border-top:1px solid var(--line-soft);padding:34px 0}
@@ -337,7 +334,7 @@
       <div class="portrait reveal">
         <div class="glow"></div>
         <div class="frame">
-          <img src="profile.jpg" alt="Erdem Aslan" onerror="this.onerror=null;this.src='profile_cropped.jpg'">
+          <img src="profile.jpg" alt="Erdem Aslan" fetchpriority="high" onerror="this.onerror=null;this.src='profile_cropped.jpg'">
           <div class="tagdot"><span class="pulse" style="width:7px;height:7px"><i></i></span><span class="t-tr">müsait</span><span class="t-en">available</span></div>
           <div class="cap">
             <span class="nm">Erdem Aslan</span>
@@ -359,7 +356,7 @@
         <div class="about-col reveal">
           <p><span class="t-tr">Teknolojiye ilgim çocuklukta bilgisayar oyunlarıyla başladı — ama beni asıl çeken, oyunları oynamak değil <b>nasıl çalıştıklarını çözmekti</b>. Bu merak beni yazılım ve mühendisliğe yöneltti.</span><span class="t-en">My interest in technology started with video games as a kid — but what pulled me in wasn't playing them, it was <b>figuring out how they work</b>. That curiosity led me to software and engineering.</span></p>
           <p><span class="t-tr">Erken yaşta pazarda ve fabrikada çalışarak iş disiplinini ve ekip çalışmasını öğrendim. ABD'de <b>Work &amp; Travel</b> programıyla uluslararası deneyim kazandım; farklı kültürlerden ekiplerle çalışarak hızlı adapte olmayı öğrendim.</span><span class="t-en">Working from an early age in a marketplace and a factory taught me discipline and teamwork. Through the <b>Work &amp; Travel</b> program in the US I gained international experience and learned to adapt fast in multicultural teams.</span></p>
-          <p><span class="t-tr">Bugün <b>Düzce Üniversitesi'nde son sınıf</b> öğrencisiyim ve <b>Gdańsk Teknoloji Üniversitesi'nde tam burslu Erasmus+</b> değişimindeyim. Barcelona merkezli Proceedit'te full-stack, Lideatech'te iOS stajı yaptım. Odağım: <b>yapay zeka / LLM</b>, ölçeklenebilir backend ve bulut/DevOps.</span><span class="t-en">Today I'm a <b>final-year student at Düzce University</b>, currently on a <b>fully-funded Erasmus+ exchange at Gdańsk University of Technology</b>. I interned full-stack at Barcelona-based Proceedit and in iOS at Lideatech. My focus: <b>AI / LLM</b>, scalable backends and cloud/DevOps.</span></p>
+          <p><span class="t-tr">Bugün <b>Düzce Üniversitesi'nde son sınıf</b> öğrencisiyim ve <b>Gdańsk Teknoloji Üniversitesi'nde tam burslu Erasmus+</b> değişimindeyim. Barcelona merkezli Proceedit'te full-stack, Lideatech'te iOS stajı yaptım. Odağım: <b>yapay zeka / LLM, bilgisayarlı görü</b>, ölçeklenebilir backend ve bulut/DevOps.</span><span class="t-en">Today I'm a <b>final-year student at Düzce University</b>, currently on a <b>fully-funded Erasmus+ exchange at Gdańsk University of Technology</b>. I interned full-stack at Barcelona-based Proceedit and in iOS at Lideatech. My focus: <b>AI / LLM, computer vision</b>, scalable backends and cloud/DevOps.</span></p>
         </div>
         <aside class="about-side reveal">
           <h4><span class="t-tr">Odak Alanları</span><span class="t-en">Focus Areas</span></h4>
