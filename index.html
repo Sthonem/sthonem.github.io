@@ -100,22 +100,24 @@
     .nav-toggle span{display:block;width:24px;height:2px;background:var(--text);margin:5px 0;border-radius:2px;transition:.25s}
 
     /* hero */
-    .hero{min-height:100svh;display:flex;align-items:center;padding-top:120px;padding-bottom:72px}
+    .hero{min-height:100svh;display:flex;align-items:center;padding-top:104px;padding-bottom:48px}
     .hero-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:64px;align-items:center;width:100%}
-    .avail{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.78rem;color:var(--text-2);border:1px solid var(--line);background:var(--bg-2);padding:7px 14px;border-radius:999px;margin-bottom:30px;letter-spacing:.03em}
+    .hero-text{min-width:0}
+    .avail{display:inline-flex;align-items:center;gap:10px;font-family:var(--f-mono);font-size:.78rem;color:var(--text-2);border:1px solid var(--line);background:var(--bg-2);padding:7px 14px;border-radius:999px;margin-bottom:22px;letter-spacing:.03em}
     .pulse{position:relative;width:8px;height:8px}
     .pulse i{position:absolute;inset:0;border-radius:50%;background:var(--accent)}
     .pulse i::after{content:"";position:absolute;inset:0;border-radius:50%;background:var(--accent);animation:ring 2.4s ease-out infinite}
     @keyframes ring{0%{transform:scale(1);opacity:.7}100%{transform:scale(3.4);opacity:0}}
-    .hero h1{font-family:var(--f-display);font-size:clamp(3.2rem,9vw,6.2rem);font-weight:600;line-height:1;letter-spacing:-.04em;margin-bottom:20px}
+    .hero h1{font-family:var(--f-display);font-size:clamp(2.5rem,5vw,3.5rem);font-weight:600;line-height:1.08;letter-spacing:-.04em;margin-bottom:16px}
+    .hero-value{font-family:var(--f-display);font-size:clamp(1.4rem,3vw,1.9rem);font-weight:500;line-height:1.3;letter-spacing:-.02em;max-width:620px;margin-bottom:16px}
     .hero h1 .accent{color:var(--accent)}
-    .role{font-family:var(--f-mono);font-size:clamp(1rem,2.4vw,1.32rem);color:var(--text);margin-bottom:24px;display:flex;align-items:center;gap:10px;min-height:1.6em}
+    .role{font-family:var(--f-mono);font-size:clamp(.95rem,1.6vw,1.05rem);color:var(--accent);margin-bottom:18px;display:flex;align-items:center;gap:10px;min-height:1.6em;line-height:1.5}
     .role .arrow{color:var(--accent)}
-    .typed{border-right:2px solid var(--accent);padding-right:2px;animation:caret 1.05s step-end infinite}
+    .typed{min-width:0;border-right:2px solid var(--accent);padding-right:2px;animation:caret 1.05s step-end infinite}
     @keyframes caret{50%{border-color:transparent}}
-    .lede{color:var(--text-2);font-size:1.08rem;max-width:540px;margin-bottom:26px}
+    .lede{color:var(--text-2);font-size:1rem;max-width:560px;margin-bottom:22px}
     .lede b{color:var(--text);font-weight:600}
-    .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:34px;font-size:.9rem;color:var(--text-2);font-family:var(--f-mono)}
+    .hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-bottom:24px;font-size:.9rem;color:var(--text-2);font-family:var(--f-mono)}
     .hero-meta > span{display:inline-flex;align-items:center;gap:8px}
     .hero-meta svg{width:15px;height:15px;stroke:var(--accent);fill:none;stroke-width:1.7}
     .cta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -182,7 +184,8 @@
     .xp.detailed .xp-list li.d{display:list-item}
 
     /* projects */
-    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px}
+    .featured-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
     .pcard{position:relative;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:transform .24s,border-color .24s,box-shadow .24s;overflow:hidden}
     .p-thumb{margin:-26px -26px 18px;border-bottom:1px solid var(--line);aspect-ratio:16/10;overflow:hidden;background:var(--bg)}
     .p-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s}
@@ -200,6 +203,17 @@
     .pcard.feat h3{font-size:1.7rem}
     .pcard p{color:var(--text-2);font-size:.95rem;margin-bottom:18px;flex:1}
     .pcard.feat p{max-width:680px}
+    .project-story{display:grid;gap:16px;margin:0 0 22px;flex:1}
+    .project-story dt{font-family:var(--f-mono);font-size:.75rem;color:var(--accent);margin-bottom:5px}
+    .project-story dd{margin:0;color:var(--text-2);font-size:.95rem;line-height:1.65}
+    .project-story dd b{color:var(--text);font-weight:600}
+    .pcard.feat .project-story{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+    .pcard p.project-note{font-size:.85rem;flex:none;margin-bottom:18px}
+    .other-projects{margin-top:28px;border:1px solid var(--line);border-radius:var(--r);padding:0 24px}
+    .other-projects summary{cursor:pointer;padding:22px 0;font-family:var(--f-display);font-size:1.15rem;font-weight:500}
+    .other-projects summary::marker{color:var(--accent)}
+    .other-projects .count{font-family:var(--f-mono);font-size:.85rem;color:var(--text-2);margin-left:10px}
+    .other-projects .proj-grid{margin-bottom:24px}
     .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
     .tag{font-family:var(--f-mono);font-size:.7rem;color:var(--text-2);background:var(--bg);border:1px solid var(--line);padding:4px 10px;border-radius:7px}
     .p-links{display:flex;gap:18px;align-items:center;font-family:var(--f-mono);font-size:.82rem;margin-top:auto}
@@ -265,8 +279,8 @@
 
     /* responsive */
     @media (max-width:920px){
-      .hero-grid{grid-template-columns:1fr;gap:48px}
-      .portrait{order:-1;max-width:300px}
+      .hero-grid{grid-template-columns:1fr;gap:32px}
+      .portrait{max-width:260px}
       .about-grid{grid-template-columns:1fr;gap:32px}
       .edu-grid{grid-template-columns:1fr}
       .nav-toggle{display:block;z-index:210}
@@ -276,6 +290,10 @@
     }
     @media (max-width:680px){
       section{padding:80px 0}
+      .role{min-height:3em}
+      .featured-grid{grid-template-columns:1fr}
+      .pcard.feat .project-story{grid-template-columns:1fr}
+      .other-projects{padding:0 16px}
       .stats{grid-template-columns:1fr 1fr;gap:24px 18px}
       .xp-item{grid-template-columns:1fr;gap:12px}
       .xp-when{padding-top:0}
@@ -308,12 +326,10 @@
     <div class="wrap hero-grid">
       <div class="hero-text">
         <div class="avail"><span class="pulse"><i></i></span><span class="t-tr">Tam Hangers · İstanbul, Türkiye</span><span class="t-en">Tam Hangers · İstanbul, Turkey</span></div>
-        <h1>Erdem<br>Aslan<span class="accent">.</span></h1>
+        <h1>Erdem Aslan<span class="accent">.</span></h1>
+        <p class="hero-value"><span class="t-tr">Şirketler için LLM uygulamaları ve AI otomasyonları geliştiriyorum.</span><span class="t-en">I build LLM applications and AI automations for businesses.</span></p>
         <div class="role notranslate" translate="no"><span class="arrow">›</span><span class="typed notranslate" translate="no"></span></div>
-        <p class="lede">
-          <span class="t-tr"><b>Tam Hangers'ta AI Solutions Engineer</b> olarak gerçek iş ihtiyaçlarına yönelik <b>yapay zeka ve LLM çözümleri</b> geliştiriyorum. Bilgisayarlı görü, ölçeklenebilir backend sistemleri ve bulut teknolojileri üzerine çalışıyorum.</span>
-          <span class="t-en">I'm an <b>AI Solutions Engineer at Tam Hangers</b>, building <b>AI and LLM solutions</b> for real business needs. My work spans computer vision, scalable backend systems and cloud technologies.</span>
-        </p>
+        <p class="lede"><span class="t-tr"><b>Tam Hangers’ta AI Solutions Engineer</b> olarak LLM, bilgisayarlı görü ve ölçeklenebilir backend sistemleri üzerine çalışıyorum.</span><span class="t-en">At <b>Tam Hangers, I work as an AI Solutions Engineer</b>, focusing on LLMs, computer vision and scalable backend systems.</span></p>
         <div class="hero-meta">
           <span><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0114 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.4"/></svg>İstanbul, TR</span>
           <span><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg><span class="t-tr">Düzce Üniversitesi · Mezun</span><span class="t-en">Düzce University · BSc</span></span>
@@ -401,7 +417,7 @@
             <div class="xp-role">AI Solutions Engineer</div>
             <div class="xp-org">Tam Hangers · <span class="t-tr">Tam zamanlı</span><span class="t-en">Full-time</span></div>
             <ul class="xp-list">
-              <li class="s"><span class="t-tr">Şirket genelindeki yapay zeka entegrasyon sürecini yürütüyorum; farklı departmanlar için otomasyonlar ve rutin işleri kolaylaştıran şirket içi AI araçları geliştirerek dijital dönüşüme katkı sağlıyorum.</span><span class="t-en">Coordinate company-wide AI integration, building department-specific automations and internal AI tools that simplify routine work and support digital transformation.</span></li>
+              <li class="s"><span class="t-tr">Departmanların manuel iş akışlarını analiz ediyor, bu süreçler için <b>AI otomasyonları ve şirket içi araçlar</b> geliştiriyorum.</span><span class="t-en">Analyse departments’ manual workflows and build <b>AI automations and internal tools</b> for those processes.</span></li>
               <li class="d"><span class="t-tr">Temmuz–Ağustos 2026 dönemindeki Bilgi Teknolojileri Uzmanı stajının ardından tam zamanlı AI Solutions Engineer rolüne geçtim.</span><span class="t-en">Moved into a full-time AI Solutions Engineer role after completing an IT Specialist internship from July to August 2026.</span></li>
               <li class="d"><span class="t-tr">Farklı departmanlardaki iş akışlarını analiz ederek tekrarlayan ve manuel süreçler için yapay zeka tabanlı otomasyonlar kuruyorum.</span><span class="t-en">Analyse workflows across departments and implement AI-powered automations for repetitive and manual processes.</span></li>
               <li class="d"><span class="t-tr">Rutin işleri kolaylaştıran şirket içi AI araçları geliştiriyorum; yapay zekanın günlük operasyonlara entegrasyonunu ve şirketin dijital dönüşümünü destekliyorum.</span><span class="t-en">Build internal AI tools that simplify routine work, integrate AI into daily operations and support the company's digital transformation.</span></li>
@@ -414,8 +430,8 @@
             <div class="xp-role"><span class="t-tr">Full-Stack Geliştirici Stajyeri</span><span class="t-en">Full-Stack Developer Intern</span></div>
             <div class="xp-org">Proceedit Trading · <span class="t-tr">YZ destekli algoritmik trading &amp; piyasa analizi (fintech)</span><span class="t-en">AI-driven trading automation &amp; market analysis (fintech)</span></div>
             <ul class="xp-list">
-              <li class="s"><span class="t-tr">Python/Flask + PostgreSQL backend (REST API'ler, DB entegrasyonları); AWS &amp; Kubernetes'te servis yönetimi.</span><span class="t-en">Python/Flask + PostgreSQL backend (REST APIs, DB integrations); service ops on AWS &amp; Kubernetes.</span></li>
-              <li class="s"><span class="t-tr">Finansal zaman serilerinde CatBoost &amp; LSTM modellerinin üretim performans analizi; Agile/JIRA ile uluslararası ekip.</span><span class="t-en">Production performance analysis of CatBoost &amp; LSTM models on financial time-series; Agile/JIRA in an international team.</span></li>
+              <li class="s"><span class="t-tr">Flask ve PostgreSQL ile <b>REST API bileşenleri ve veritabanı entegrasyonları</b> geliştirdim; AWS ve Kubernetes servis operasyonlarına katkı sağladım.</span><span class="t-en">Built <b>REST API components and database integrations</b> with Flask and PostgreSQL; contributed to service operations on AWS and Kubernetes.</span></li>
+              <li class="s"><span class="t-tr">CatBoost ve LSTM modellerinin <b>üretim performansı analizine</b> finansal zaman serisi verileriyle katkı sağladım.</span><span class="t-en">Contributed to <b>production performance analysis</b> of CatBoost and LSTM models on financial time-series data.</span></li>
               <li class="d"><span class="t-tr">Python (Flask) ve PostgreSQL ile backend API bileşenleri geliştirdim; REST endpoint'leri ve veritabanı entegrasyonlarıyla sistemin veri akışını ve güvenilirliğini iyileştirdim.</span><span class="t-en">Built backend API components with Python (Flask) and PostgreSQL; REST endpoints and database integrations that improved the system's data flow and reliability.</span></li>
               <li class="d"><span class="t-tr">AWS ve Kubernetes ortamlarında pod ve servis yönetimi gerçekleştirerek geliştirme, hata ayıklama ve backend test süreçlerini hızlandırdım.</span><span class="t-en">Managed pod and service operations on AWS and Kubernetes, accelerating development, debugging and backend testing.</span></li>
               <li class="d"><span class="t-tr">Finansal zaman serisi verisi üzerinde YZ destekli algoritmik modelleme çalışmalarına katıldım; CatBoost ve LSTM tabanlı modellerin üretim ortamındaki performans analizine katkı sağladım.</span><span class="t-en">Contributed to AI-driven algorithmic modelling on financial time-series data, supporting the production performance analysis of CatBoost- and LSTM-based models.</span></li>
@@ -430,7 +446,7 @@
             <div class="xp-role"><span class="t-tr">iOS Uygulama Geliştirici Stajyeri</span><span class="t-en">iOS Developer Intern</span></div>
             <div class="xp-org">Lideatech · <span class="t-tr">mobil & yazılım geliştirme</span><span class="t-en">mobile &amp; software development</span></div>
             <ul class="xp-list">
-              <li class="s"><span class="t-tr">Swift/SwiftUI + Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim — MVVM, Firestore + auth, bütçe analizi ve interaktif dashboard'lar.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI + Firebase — MVVM, Firestore + auth, budgeting and interactive dashboards.</span></li>
+              <li class="s"><span class="t-tr"><b>FinFlow iOS uygulamasını sıfırdan geliştirdim:</b> gelir/gider takibi, bütçe analizi ve interaktif dashboard. SwiftUI, Firebase ve MVVM kullandım.</span><span class="t-en"><b>Built the FinFlow iOS app from scratch:</b> income/expense tracking, budget analysis and an interactive dashboard, using SwiftUI, Firebase and MVVM.</span></li>
               <li class="d"><span class="t-tr">Swift/SwiftUI ve Firebase ile FinFlow kişisel finans uygulamasını sıfırdan geliştirdim; Firestore entegrasyonu ve kimlik doğrulamayla güvenli, gerçek zamanlı veri akışı sağladım.</span><span class="t-en">Built the FinFlow personal-finance app from scratch with Swift/SwiftUI and Firebase; secure, real-time data flow via Firestore integration and user authentication.</span></li>
               <li class="d"><span class="t-tr">Gelir/gider takibi, bütçe analizi ve veri görselleştirme özelliklerini modern iOS pratikleriyle hayata geçirdim; interaktif dashboard'larla kullanıcı deneyimini iyileştirdim.</span><span class="t-en">Shipped income/expense tracking, budget analysis and data-visualization features with modern iOS practices, improving UX through interactive dashboards.</span></li>
               <li class="d"><span class="t-tr">MVVM mimarisi benimseyerek modüler ve sürdürülebilir bir kod tabanı kurdum; uygulamanın uzun vadeli ölçeklenebilirliğini güvence altına aldım.</span><span class="t-en">Adopted an MVVM architecture for a modular, maintainable codebase, ensuring the app's long-term scalability.</span></li>
@@ -459,16 +475,20 @@
       <div class="sec-head reveal">
         <div class="eyebrow"><span class="num">03</span><span class="t-tr">Projeler</span><span class="t-en">Projects</span></div>
         <h2 class="title"><span class="t-tr">Seçili Çalışmalar</span><span class="t-en">Selected Work</span></h2>
-        <p><span class="t-tr">Yapay zeka, LLM, dağıtık backend ve veri bilimi alanlarından bir seçki — çoğu canlı veya açık kaynak.</span><span class="t-en">A selection across AI, LLMs, distributed backends and data science — most live or open-source.</span></p>
+        <p><span class="t-tr">LLM uzmanlaşması, çok ajanlı simülasyon ve mikroservisler: problemden çalışan sisteme üç çalışma.</span><span class="t-en">LLM specialization, multi-agent simulation and microservices: three projects from problem to working system.</span></p>
       </div>
 
-      <div class="proj-grid">
-
+      <div class="proj-grid featured-grid">
         <!-- Featured thesis -->
         <article class="pcard feat reveal">
-          <div class="p-top"><span class="p-kind"><span class="t-tr">★ Lisans Tezi · arXiv'de yayımlandı</span><span class="t-en">★ Bachelor's Thesis · Published on arXiv</span></span><span class="p-year">2025</span></div>
+          <div class="p-top"><span class="p-kind"><span class="t-tr">★ Lisans Tezi · arXiv'de yayımlandı</span><span class="t-en">★ Bachelor's Thesis · Published on arXiv</span></span><span class="p-year">2026</span></div>
           <h3><span class="t-tr">LLM Distilasyonu &amp; Alana Özgü Uzmanlaşma</span><span class="t-en">LLM Distillation &amp; Domain Specialization</span></h3>
-          <p><span class="t-tr">Lisans tezim (danışman Prof. Dr. Pakize Erdoğmuş) — <i>"Domain-Specific Specialization in Low-Resource Settings"</i>. Düşük kaynakla, offline response-based <b>bilgi damıtma</b> ile alana özgü bir asistan kurdum: bir <b>"Düzce Üniversitesi Mevzuat Uzmanı"</b>. Qwen-2.5-7B öğrenci modelini Unsloth ile optimize ederek A100 bellek ihtiyacını <b>40 GB → 16 GB</b> düşürdüm; yalnızca <b>500 satırlık</b> bağlam-duyarlı sentetik veriyle <b>%96.7 doğruluk</b> + sağlam reddetme elde ettim — veri kalitesinin nicelikten önemli olduğunu (LIMA hipotezi) gösterir nitelikte.</span><span class="t-en">My bachelor's thesis (advisor Prof. Pakize Erdoğmuş) — <i>"Domain-Specific Specialization in Low-Resource Settings"</i>. A low-resource, offline response-based <b>knowledge-distillation</b> pipeline for a domain assistant: a <b>"Düzce University Regulation Expert"</b>. Optimizing a Qwen-2.5-7B student with Unsloth cut A100 memory from <b>40 GB → 16 GB</b>; a mere <b>500-line</b> context-aware synthetic dataset reached <b>96.7% accuracy</b> + robust rejection — evidence that data quality beats quantity (the LIMA hypothesis).</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Kısıtlı GPU belleğiyle kurum mevzuatına doğru yanıt veren bir LLM asistanı geliştirmek.</span><span class="t-en">Build an LLM assistant that answers institutional regulation questions accurately with limited GPU memory.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Qwen-2.5-7B için bilgi damıtma süreci kurdum; Unsloth ve <b>500 satırlık</b> bağlam odaklı sentetik veri kullandım.</span><span class="t-en">Built a knowledge-distillation pipeline for Qwen-2.5-7B using Unsloth and <b>500 lines</b> of context-aware synthetic data.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Deneysel değerlendirmede <b>%96,7 doğruluk</b>. GPU bellek ihtiyacı <b>40 GB → 16 GB</b>: %60 azalma.</span><span class="t-en"><b>96.7% accuracy</b> in the experimental evaluation. GPU memory requirements fell from <b>40 GB to 16 GB</b>: a 60% reduction.</span></dd></div>
+          </dl>
+          <p class="project-note"><span class="t-tr">Düzce Üniversitesi Mevzuat Uzmanı · Lisans tezi · Danışman: Prof. Dr. Pakize Erdoğmuş</span><span class="t-en">Düzce University Regulation Expert · Bachelor’s thesis · Advisor: Prof. Pakize Erdoğmuş</span></p>
           <div class="tags"><span class="tag">PyTorch</span><span class="tag">Knowledge Distillation</span><span class="tag">Qwen-2.5-7B</span><span class="tag">Unsloth</span><span class="tag">Synthetic Data</span><span class="tag">LLM</span></div>
           <div class="p-links">
             <a href="https://arxiv.org/abs/2601.16219" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>arXiv:2601.16219</a>
@@ -480,23 +500,15 @@
           <div class="p-thumb"><img src="proj-historai.jpg" alt="Historai preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3178c6"></span>TypeScript</span><span class="p-year">2026</span></div>
           <h3>Historai</h3>
-          <p><span class="t-tr">Alternatif tarih için çok ajanlı YZ simülasyon motoru. Bir "ya olsaydı?" sorusu sor; 6–8 YZ aktörü kişilik ve etki skorlarıyla tur tur kararlar alır, rastgele olaylara tepki verir; sonunda anlatı raporu, zaman çizelgesi ve toprak kontrol haritası üretilir.</span><span class="t-en">A multi-agent AI engine for alternate history. Ask a what-if; 6–8 AI actors with personas and influence scores make turn-by-turn decisions, react to random events, then produce a narrative report, timeline and territorial map.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Alternatif tarih senaryolarında farklı aktörlerin kararlarını ve etkileşimlerini incelemek.</span><span class="t-en">Explore how different actors make decisions and interact in alternate-history scenarios.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Kişilik ve etki skorlarına sahip <b>6–8 AI aktörünü</b> tur tabanlı bir simülasyonda bir araya getirdim.</span><span class="t-en">Built a turn-based simulation with <b>6–8 AI actors</b>, each with a persona and influence score.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Senaryodan <b>anlatı raporu, zaman çizelgesi ve harita</b> üreten, canlı demosu bulunan uygulama.</span><span class="t-en">An application with a live demo that turns a scenario into a <b>narrative report, timeline and map</b>.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">FastAPI</span><span class="tag">Next.js 16</span><span class="tag">Groq · LLaMA 3.3</span><span class="tag">Gemini</span><span class="tag">Tailwind v4</span></div>
           <div class="p-links">
             <a href="https://historai-chi.vercel.app" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span class="t-tr">Canlı Demo</span><span class="t-en">Live Demo</span></a>
             <a href="https://github.com/Sthonem/historai" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
-          </div>
-        </article>
-
-        <!-- Sentinel Tracker -->
-        <article class="pcard reveal">
-          <div class="p-thumb"><img src="proj-sentinel.jpg" alt="Sentinel Tracker — satellite orbits" loading="lazy"></div>
-          <div class="p-top"><span class="p-lang"><span class="d" style="background:#3178c6"></span>TypeScript</span><span class="p-year">2026</span></div>
-          <h3>Sentinel Tracker</h3>
-          <p><span class="t-tr">ESA Sentinel-1/2 uydu takımyıldızlarının gerçek zamanlı 3D görselleştirmesi. CesiumJS &amp; Resium, satellite.js (SGP4) yörünge propagasyonu, TLE verisi ve FastAPI backend.</span><span class="t-en">Real-time 3D visualization of ESA Sentinel-1/2 satellite constellations using CesiumJS &amp; Resium, satellite.js (SGP4) propagation, TLE data and a FastAPI backend.</span></p>
-          <div class="tags"><span class="tag">CesiumJS</span><span class="tag">Resium</span><span class="tag">SGP4</span><span class="tag">FastAPI</span><span class="tag">Vite</span></div>
-          <div class="p-links">
-            <a href="https://github.com/Sthonem/sentinel-tracker" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
           </div>
         </article>
 
@@ -505,19 +517,47 @@
           <div class="p-thumb"><img src="proj-banking.jpg" alt="Banking AI Platform — live Grafana observability dashboard" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3776ab"></span>Python</span><span class="p-year">2026</span></div>
           <h3>Banking AI Platform</h3>
-          <p><span class="t-tr">Olay-güdümlü mimari ve DevOps pratiği için geliştirmeye devam ettiğim kişisel bir bankacılık mikroservis projesi — Docker ve Kafka ile servisler, Prometheus/Grafana/Zipkin ile izleme; KYC ve dolandırıcılık tespiti denemeleri.</span><span class="t-en">A personal project I keep developing to practice event-driven microservices and DevOps — services with Docker &amp; Kafka, observability via Prometheus/Grafana/Zipkin, and KYC / fraud-detection experiments.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Bankacılık senaryolarında olay güdümlü mikroservisleri ve servis izlemeyi birlikte denemek.</span><span class="t-en">Explore event-driven microservices and observability together in banking scenarios.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Docker ve Kafka ile servisleri; Prometheus, Grafana ve Zipkin ile metrik ve iz takibini kurdum.</span><span class="t-en">Built services with Docker and Kafka, with metrics and tracing through Prometheus, Grafana and Zipkin.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>KYC ve dolandırıcılık tespiti denemeleri</b> içeren, geliştirmeye devam ettiğim kişisel platform.</span><span class="t-en">An ongoing personal platform with <b>KYC and fraud-detection experiments</b>.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">Microservices</span><span class="tag">Kafka</span><span class="tag">FastAPI</span><span class="tag">Docker</span><span class="tag">Grafana</span></div>
           <div class="p-links">
             <a href="https://github.com/Sthonem/banking-ai-platform" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
           </div>
         </article>
+      </div>
+
+      <details class="other-projects">
+        <summary><span class="t-tr">Diğer projeler</span><span class="t-en">Other projects</span><span class="count">10</span></summary>
+        <div class="proj-grid">
+        <!-- Sentinel Tracker -->
+        <article class="pcard">
+          <div class="p-thumb"><img src="proj-sentinel.jpg" alt="Sentinel Tracker — satellite orbits" loading="lazy"></div>
+          <div class="p-top"><span class="p-lang"><span class="d" style="background:#3178c6"></span>TypeScript</span><span class="p-year">2026</span></div>
+          <h3>Sentinel Tracker</h3>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Sentinel-1/2 uydularının konumlarını ve yörüngelerini anlaşılır biçimde izlemek.</span><span class="t-en">Make Sentinel-1/2 satellite positions and orbits easier to explore.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">TLE verisini SGP4 yörünge hesabı, CesiumJS ve FastAPI ile birleştirdim.</span><span class="t-en">Combined TLE data and SGP4 orbit propagation with CesiumJS and FastAPI.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Uydu takımyıldızlarının <b>gerçek zamanlı 3D görselleştirmesi</b>.</span><span class="t-en">A <b>real-time 3D visualization</b> of the satellite constellations.</span></dd></div>
+          </dl>
+          <div class="tags"><span class="tag">CesiumJS</span><span class="tag">Resium</span><span class="tag">SGP4</span><span class="tag">FastAPI</span><span class="tag">Vite</span></div>
+          <div class="p-links">
+            <a href="https://github.com/Sthonem/sentinel-tracker" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
+          </div>
+        </article>
 
         <!-- Territory Capture -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-territory.jpg" alt="Territory Capture game" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3776ab"></span>Python</span><span class="p-year">2026</span></div>
           <h3>Territory Capture · AlphaZero</h3>
-          <p><span class="t-tr">Özgün bir bölge-yakalama strateji oyunu (5×5 / 6×6 / 7×7) için baştan sona AlphaZero tarzı pipeline — MCTS, policy-value sinir ağı, self-play ve arena ile iteratif model terfisi. Cilalı masaüstü arayüz: insan-vs-AI, turnuva modu ve oyuncu başına zorluk seviyesi.</span><span class="t-en">A full AlphaZero-style pipeline for an original territory-capture game (5×5 / 6×6 / 7×7) — MCTS, a policy-value network, self-play and arena-based model promotion. Polished desktop GUI with human-vs-AI, a tournament mode and per-player difficulty.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Özgün bir strateji oyununda kendi kendine öğrenen bir rakip geliştirmek.</span><span class="t-en">Build a self-learning opponent for an original strategy game.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">MCTS, policy-value ağı, self-play ve arena değerlendirmesiyle AlphaZero tarzı eğitim hattı kurdum.</span><span class="t-en">Built an AlphaZero-style training pipeline with MCTS, a policy-value network, self-play and arena evaluation.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>3 tahta boyutu</b> (5×5, 6×6, 7×7), insan–AI maçları ve turnuva modu içeren masaüstü oyun.</span><span class="t-en">A desktop game with <b>3 board sizes</b> (5×5, 6×6, 7×7), human-vs-AI matches and tournament mode.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">AlphaZero</span><span class="tag">MCTS</span><span class="tag">Self-Play</span><span class="tag">PyTorch</span></div>
           <div class="p-links">
             <a href="https://github.com/Sthonem/Territory_Capture-Alphazero" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
@@ -525,11 +565,15 @@
         </article>
 
         <!-- Erasmus Buddy -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-erasmus.jpg" alt="Erasmus Buddy preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3178c6"></span>TypeScript</span><span class="p-year">2026</span></div>
           <h3>Erasmus Buddy</h3>
-          <p><span class="t-tr">Gdańsk Teknoloji Üniversitesi'ndeki Erasmus öğrencileri için mobil öncelikli bir web uygulaması — yeni gelenlerin şehre ve üniversiteye uyumunu kolaylaştırır.</span><span class="t-en">A mobile-first web app for Erasmus students at Gdańsk University of Technology — helping newcomers settle into the city and the university.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Gdańsk’a yeni gelen Erasmus öğrencilerinin şehre ve üniversiteye uyumunu kolaylaştırmak.</span><span class="t-en">Help incoming Erasmus students settle into Gdańsk and its university.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Gdańsk Teknoloji Üniversitesi öğrencileri için Next.js ve TypeScript ile mobil öncelikli bir uygulama geliştirdim.</span><span class="t-en">Built a mobile-first app for Gdańsk University of Technology students with Next.js and TypeScript.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Öğrencilerin kullanabildiği <b>canlı web uygulaması</b>.</span><span class="t-en">A <b>live web application</b> students can use.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Mobile-First</span></div>
           <div class="p-links">
             <a href="https://erasmus-buddy-pg.vercel.app" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span class="t-tr">Canlı Demo</span><span class="t-en">Live Demo</span></a>
@@ -538,38 +582,54 @@
         </article>
 
         <!-- AntennaLab -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-antennalab.jpg" alt="AntennaLab preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#f1e05a"></span>JavaScript</span><span class="p-year">2026</span></div>
           <h3>AntennaLab</h3>
-          <p><span class="t-tr">Modüler analitik RF anten hesaplayıcısı: hesap motoru + Streamlit arayüzü + FastAPI servisi + web arayüzü. MVP tamamlandı ve Balanis referansıyla doğrulandı.</span><span class="t-en">A modular analytical RF antenna calculator: compute engine + Streamlit UI + FastAPI service + web frontend. MVP completed and validated against Balanis.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">RF anten hesaplamalarını tekrar kullanılabilir bir araçta toplamak.</span><span class="t-en">Bring analytical RF antenna calculations into a reusable tool.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Hesap motorunu Streamlit arayüzü, FastAPI servisi ve web arayüzüyle birleştirdim.</span><span class="t-en">Connected a compute engine to a Streamlit UI, FastAPI service and web frontend.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>Balanis referansıyla doğrulanmış MVP</b> ve canlı demo.</span><span class="t-en">An <b>MVP validated against Balanis</b>, with a live demo.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">Python</span><span class="tag">NumPy</span><span class="tag">Streamlit</span><span class="tag">FastAPI</span></div>
           <div class="p-links"><a href="https://antennalab.onrender.com/" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span class="t-tr">Canlı Demo</span><span class="t-en">Live Demo</span></a><span class="p-private"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="t-tr">Özel repo</span><span class="t-en">Private</span></span></div>
         </article>
 
         <!-- VAULT24 -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#f05138"></span>Swift</span><span class="p-year">2026</span></div>
           <h3>VAULT24</h3>
-          <p><span class="t-tr">İş, yüksek lisans, vize ve özel başvuruları yöneten akıllı bir macOS belge kasası. SwiftUI + SwiftData ile geliştirildi.</span><span class="t-en">A smart macOS document vault for managing job, master's, visa and custom applications. Built with SwiftUI + SwiftData.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">İş, yüksek lisans ve vize başvurularındaki belgeleri düzenli yönetmek.</span><span class="t-en">Organize documents for job, master’s and visa applications.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">SwiftUI ve SwiftData ile macOS için bir belge kasası geliştirdim.</span><span class="t-en">Built a macOS document vault with SwiftUI and SwiftData.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Farklı başvuru türlerini tek yerde yöneten <b>macOS uygulaması</b>.</span><span class="t-en">A <b>macOS application</b> for managing different application types in one place.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">SwiftUI</span><span class="tag">SwiftData</span><span class="tag">macOS</span></div>
           <div class="p-links"><span class="p-private"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="t-tr">Özel repo</span><span class="t-en">Private</span></span></div>
         </article>
 
         <!-- FinFlow -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#f05138"></span>Swift</span><span class="p-year">2025</span></div>
           <h3>FinFlow</h3>
-          <p><span class="t-tr">Swift/SwiftUI ve Firebase ile geliştirilen iOS kişisel finans uygulaması: gelir/gider takibi, bütçe analizi ve interaktif dashboard. (Lideatech stajı)</span><span class="t-en">An iOS personal-finance app in Swift/SwiftUI + Firebase: income/expense tracking, budget analysis and an interactive dashboard. (Lideatech internship)</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Gelir, gider ve bütçe bilgilerini tek uygulamada takip etmek.</span><span class="t-en">Track income, expenses and budgets in one application.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Lideatech stajımda SwiftUI, Firebase ve MVVM ile uygulamayı sıfırdan geliştirdim.</span><span class="t-en">Built the app from scratch with SwiftUI, Firebase and MVVM during my Lideatech internship.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>Gelir/gider takibi, bütçe analizi ve interaktif dashboard</b> içeren iOS uygulaması.</span><span class="t-en">An iOS app with <b>income/expense tracking, budget analysis and an interactive dashboard</b>.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">Swift</span><span class="tag">SwiftUI</span><span class="tag">Firebase</span><span class="tag">MVVM</span></div>
           <div class="p-links"><span class="p-private"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg><span class="t-tr">Özel repo</span><span class="t-en">Private</span></span></div>
         </article>
 
         <!-- Car Brand Classification -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#da5b0b"></span>Jupyter</span><span class="p-year">2025</span></div>
           <h3><span class="t-tr">Araç Markası Sınıflandırma</span><span class="t-en">Car Brand Classification</span></h3>
-          <p><span class="t-tr">EfficientNet-B4 transfer öğrenimi ile 33 araç markasını sınıflandıran model; 16.500+ görsel, warm-up + fine-tuning stratejisi. (Akbank Derin Öğrenme Bootcamp)</span><span class="t-en">An EfficientNet-B4 transfer-learning model classifying 33 car brands across 16,500+ images, with a warm-up + fine-tuning strategy. (Akbank Deep Learning Bootcamp)</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Otomobil görsellerinden araç markasını sınıflandırmak.</span><span class="t-en">Classify car brands from vehicle images.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">16.500+ görselle EfficientNet-B4 transfer öğrenimi, warm-up ve fine-tuning uyguladım.</span><span class="t-en">Applied EfficientNet-B4 transfer learning, warm-up and fine-tuning to 16,500+ images.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr">Akbank Derin Öğrenme Bootcamp kapsamında <b>33 markayı sınıflandıran model</b>.</span><span class="t-en">A model covering <b>33 car brands</b>, built during the Akbank Deep Learning Bootcamp.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">EfficientNet-B4</span><span class="tag">TensorFlow</span><span class="tag">Transfer Learning</span></div>
           <div class="p-links">
             <a href="https://github.com/Sthonem/car-brand-classification" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
@@ -577,11 +637,15 @@
         </article>
 
         <!-- Brain Tumor -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-braintumor.jpg" alt="Brain tumor detection &amp; segmentation pipeline" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#e16737"></span>MATLAB</span><span class="p-year">2024</span></div>
           <h3><span class="t-tr">Beyin Tümörü Tespiti ve Segmentasyonu</span><span class="t-en">Brain Tumor Detection &amp; Segmentation</span></h3>
-          <p><span class="t-tr">İki aşamalı MRI hattı: YOLOv2 (Darknet-19) ile tümör tespiti, ardından MATLAB'da morfolojik segmentasyon; GoogLeNet / ResNet-50 / MobileNetV2 sınıflandırması ve interaktif MATLAB App Designer arayüzü.</span><span class="t-en">A two-stage MRI pipeline: YOLOv2 (Darknet-19) tumor detection, then morphological segmentation in MATLAB — plus GoogLeNet / ResNet-50 / MobileNetV2 classification, in an interactive MATLAB App Designer app.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">MRI görüntülerinde tümör tespiti ve segmentasyonunu akademik bir uygulamada incelemek.</span><span class="t-en">Explore tumor detection and segmentation in MRI images through an academic application.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">YOLOv2 tespitini morfolojik segmentasyon ve CNN sınıflandırmasıyla birleştirdim.</span><span class="t-en">Combined YOLOv2 detection with morphological segmentation and CNN classification.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>İki aşamalı görüntü işleme hattı</b> ve interaktif MATLAB App Designer arayüzü.</span><span class="t-en">A <b>two-stage image-processing pipeline</b> with an interactive MATLAB App Designer interface.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">MATLAB</span><span class="tag">YOLOv2</span><span class="tag">Segmentation</span><span class="tag">ResNet-50</span></div>
           <div class="p-links">
             <a href="https://github.com/Sthonem/brain-tumor-detector-Matlab" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
@@ -589,29 +653,37 @@
         </article>
 
         <!-- GAN Data Augmentation -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-gan.jpg" alt="GAN data augmentation — brain hemorrhage CT dataset" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3776ab"></span>Python</span><span class="p-year">2024</span></div>
           <h3><span class="t-tr">GAN ile Veri Artırma</span><span class="t-en">GAN Data Augmentation</span></h3>
-          <p><span class="t-tr">PyTorch ile GAN tabanlı veri artırmayı denediğim akademik bir çalışma — dengesiz beyin BT (normal / kanamalı) veri seti için koşullu (conditional) DCGAN ile sentetik görüntü üretimi. (Derin öğrenme / tıbbi görüntüleme)</span><span class="t-en">An academic project exploring GAN-based data augmentation with PyTorch — a conditional DCGAN trained to synthesize brain CT images (normal / hemorrhage) for an imbalanced stroke dataset. (Deep learning / medical imaging)</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Normal ve kanamalı beyin BT görüntülerinden oluşan dengesiz veri setini artırmak.</span><span class="t-en">Augment an imbalanced dataset of normal and hemorrhage brain CT images.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">PyTorch ile koşullu DCGAN eğiterek sentetik görüntü üretimini denedim.</span><span class="t-en">Trained a conditional DCGAN in PyTorch to explore synthetic image generation.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>İki sınıf için sentetik BT görüntüleri</b> üreten akademik deney.</span><span class="t-en">An academic experiment generating <b>synthetic CT images for two classes</b>.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">PyTorch</span><span class="tag">DCGAN</span><span class="tag"><span class="t-tr">Tıbbi Görüntüleme</span><span class="t-en">Medical Imaging</span></span></div>
           <div class="p-links"><span class="p-private"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 3 3 6 3s6-2 6-3v-5"/></svg><span class="t-tr">Akademik proje</span><span class="t-en">Academic</span></span></div>
         </article>
 
         <!-- StockMind -->
-        <article class="pcard reveal">
+        <article class="pcard">
           <div class="p-thumb"><img src="proj-stockmind.jpg" alt="StockMind dashboard preview" loading="lazy"></div>
           <div class="p-top"><span class="p-lang"><span class="d" style="background:#3776ab"></span>Python</span><span class="p-year">2025</span></div>
           <h3>StockMind</h3>
-          <p><span class="t-tr">YZ destekli risk skorlamasıyla kişisel hisse senedi portföy analiz aracı.</span><span class="t-en">A personal stock-portfolio analysis tool with AI-powered risk scoring.</span></p>
+          <dl class="project-story">
+            <div><dt><span class="t-tr">Problem</span><span class="t-en">Problem</span></dt><dd><span class="t-tr">Kişisel hisse senedi portföyünü ve riskini incelemek.</span><span class="t-en">Explore a personal stock portfolio and its risk.</span></dd></div>
+            <div><dt><span class="t-tr">Katkım</span><span class="t-en">My contribution</span></dt><dd><span class="t-tr">Python ile portföy analizini AI destekli risk skorlamasıyla birleştirdim.</span><span class="t-en">Combined portfolio analysis with AI-powered risk scoring in Python.</span></dd></div>
+            <div><dt><span class="t-tr">Sonuç</span><span class="t-en">Result</span></dt><dd><span class="t-tr"><b>Canlı demo</b> üzerinden erişilebilen kişisel portföy analiz aracı.</span><span class="t-en">A personal portfolio-analysis tool accessible through a <b>live demo</b>.</span></dd></div>
+          </dl>
           <div class="tags"><span class="tag">Python</span><span class="tag">AI</span><span class="tag">Fintech</span></div>
           <div class="p-links">
             <a href="https://stockmind-8fzu.vercel.app/" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg><span class="t-tr">Canlı Demo</span><span class="t-en">Live Demo</span></a>
             <a href="https://github.com/Sthonem/stockmind" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg>Repo</a>
           </div>
         </article>
-
-      </div>
+        </div>
+      </details>
 
       <div class="more-row reveal">
         <a href="https://github.com/Sthonem?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 002 12c0 4.42 2.87 8.17 6.84 9.5.5.09.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.16.58.67.48A10 10 0 0022 12 10 10 0 0012 2z"/></svg><span class="t-tr">GitHub'da tüm repolar</span><span class="t-en">All repositories on GitHub</span></a>
