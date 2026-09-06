@@ -309,7 +309,7 @@
       <div class="hero-text">
         <div class="avail"><span class="pulse"><i></i></span><span class="t-tr">Tam Hangers · İstanbul, Türkiye</span><span class="t-en">Tam Hangers · İstanbul, Turkey</span></div>
         <h1>Erdem<br>Aslan<span class="accent">.</span></h1>
-        <div class="role"><span class="arrow">›</span><span class="typed"></span></div>
+        <div class="role notranslate" translate="no"><span class="arrow">›</span><span class="typed notranslate" translate="no"></span></div>
         <p class="lede">
           <span class="t-tr"><b>Tam Hangers'ta AI Solutions Engineer</b> olarak gerçek iş ihtiyaçlarına yönelik <b>yapay zeka ve LLM çözümleri</b> geliştiriyorum. Bilgisayarlı görü, ölçeklenebilir backend sistemleri ve bulut teknolojileri üzerine çalışıyorum.</span>
           <span class="t-en">I'm an <b>AI Solutions Engineer at Tam Hangers</b>, building <b>AI and LLM solutions</b> for real business needs. My work spans computer vision, scalable backend systems and cloud technologies.</span>
@@ -808,12 +808,42 @@
       document.getElementById('year').textContent=new Date().getFullYear();
 
       var langBtns=document.querySelectorAll('[data-lang-toggle]');
+      var rolesByLang={
+        en:['AI Solutions Engineer','LLM Engineer','Full-Stack Developer','Cloud / DevOps'],
+        tr:['Yapay Zeka Çözümleri Mühendisi','LLM Mühendisi','Full-Stack Geliştirici','Bulut / DevOps']
+      };
+      var tw=document.querySelector('.typed'),roles=[],ri=0,ci=0,del=false,typingTimer=null;
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      function tick(){
+        var word=roles[ri],delay;
+        if(!del){
+          tw.textContent=word.slice(0,++ci);
+          if(ci===word.length){del=true;delay=1700;}else{delay=92;}
+        }else{
+          tw.textContent=word.slice(0,--ci);
+          if(ci===0){del=false;ri=(ri+1)%roles.length;}
+          delay=del?42:92;
+        }
+        typingTimer=setTimeout(tick,delay);
+      }
+      function restartTyping(en){
+        clearTimeout(typingTimer);
+        typingTimer=null;
+        if(!tw)return;
+        roles=rolesByLang[en?'en':'tr'];
+        ri=0;ci=0;del=false;
+        tw.lang=en?'en':'tr';
+        tw.textContent='';
+        if(reduce){tw.textContent=roles[0];return;}
+        tick();
+      }
       function applyLang(){
         var en=root.classList.contains('en');
         document.title=en?'Erdem Aslan — AI Solutions Engineer':'Erdem Aslan — AI Çözümleri Mühendisi';
         root.lang=en?'en':'tr';
         langBtns.forEach(function(b){b.textContent=en?'TR':'EN';});
         var cv=document.getElementById('cvBtn');if(cv)cv.href=en?'Erdem-Aslan-CV-EN.pdf':'Erdem-Aslan-CV-TR.pdf';
+        restartTyping(en);
       }
       try{if(localStorage.getItem('lang')==='tr')root.classList.remove('en');}catch(e){}
       applyLang();
@@ -837,11 +867,6 @@
       var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var id=e.target.id;links.forEach(function(l){l.classList.toggle('active',l.getAttribute('href')==='#'+id);});}});},{rootMargin:'-45% 0px -50% 0px'});
       document.querySelectorAll('section[id]').forEach(function(s){so.observe(s);});
 
-      var roles=['AI Solutions Engineer','LLM Engineer','Full-Stack Developer','Cloud / DevOps'];
-      var tw=document.querySelector('.typed'),ri=0,ci=0,del=false;
-      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      if(tw&&!reduce){(function tick(){var w=roles[ri];if(!del){tw.textContent=w.slice(0,++ci);if(ci===w.length){del=true;return setTimeout(tick,1700);}}else{tw.textContent=w.slice(0,--ci);if(ci===0){del=false;ri=(ri+1)%roles.length;}}setTimeout(tick,del?42:92);})();}
-      else if(tw){tw.textContent=roles[0];}
     })();
   </script>
 </body>
