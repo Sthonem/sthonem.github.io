@@ -182,7 +182,7 @@
     .xp.detailed .xp-list li.d{display:list-item}
 
     /* projects */
-    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:20px}
+    .proj-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:20px}
     .pcard{position:relative;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r);padding:26px;display:flex;flex-direction:column;transition:transform .24s,border-color .24s,box-shadow .24s;overflow:hidden}
     .p-thumb{margin:-26px -26px 18px;border-bottom:1px solid var(--line);aspect-ratio:16/10;overflow:hidden;background:var(--bg)}
     .p-thumb img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform .35s}
@@ -212,7 +212,7 @@
     .more-row{margin-top:32px;text-align:center}
 
     /* skills */
-    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px}
+    .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}
     .skblock{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-2);padding:24px}
     .skblock h4{font-family:var(--f-mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:9px}
     .skblock h4 svg{width:17px;height:17px;stroke:var(--accent);fill:none;stroke-width:1.8}
@@ -230,7 +230,7 @@
     .edu .ribbon{position:absolute;top:24px;right:24px;font-family:var(--f-mono);font-size:.66rem;color:var(--accent);border:1px solid var(--accent-line);background:var(--accent-soft);padding:3px 9px;border-radius:999px}
 
     /* certificates */
-    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+    .cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:16px}
     .cert{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;background:var(--bg-2);padding:20px;transition:border-color .2s,transform .2s}
     .cert:hover{border-color:var(--accent-line);transform:translateY(-3px)}
     .cert .ic{width:46px;height:46px;border-radius:11px;flex-shrink:0;display:grid;place-items:center;font-size:1.3rem;background:var(--bg);border:1px solid var(--line)}
@@ -373,8 +373,8 @@
         </aside>
       </div>
       <div class="stats reveal" style="margin-top:48px">
-        <div class="stat"><b>4<span class="u">+</span></b><small><span class="t-tr">Profesyonel deneyim</span><span class="t-en">Professional roles</span></small></div>
-        <div class="stat"><b>15<span class="u">+</span></b><small><span class="t-tr">Yayımlanan proje</span><span class="t-en">Shipped projects</span></small></div>
+        <div class="stat"><b>3</b><small><span class="t-tr">Mühendislik rolü (1 tam zamanlı, 2 staj)</span><span class="t-en">Engineering roles (1 full-time, 2 internships)</span></small></div>
+        <div class="stat"><b>3</b><small><span class="t-tr">CI kapılı ajan ve entegrasyon projesi</span><span class="t-en">CI-gated agent &amp; integration projects</span></small></div>
         <div class="stat"><b>1</b><small><span class="t-tr">arXiv tez ön baskısı</span><span class="t-en">arXiv thesis preprint</span></small></div>
         <div class="stat"><b>C1</b><small><span class="t-tr">İngilizce (iş)</span><span class="t-en">English (business)</span></small></div>
       </div>
@@ -399,10 +399,10 @@
           <div class="xp-when"><span class="t-tr">Tem 2026 — Devam</span><span class="t-en">Jul 2026 — Present</span><span class="place"><span class="t-tr">İstanbul · Ofiste</span><span class="t-en">İstanbul · On-site</span></span></div>
           <div>
             <div class="xp-role">AI Solutions Engineer</div>
-            <div class="xp-org">Tam Hangers · <span class="t-tr">Tam zamanlı</span><span class="t-en">Full-time</span></div>
+            <div class="xp-org">Tam Hangers · <span class="t-tr">Ağustos 2026 sonundan beri tam zamanlı · öncesinde bir aylık BT stajı</span><span class="t-en">Full-time since late Aug 2026, after a one-month IT internship</span></div>
             <ul class="xp-list">
               <li class="s"><span class="t-tr">Şirket genelindeki yapay zeka entegrasyon sürecini yürütüyorum; farklı departmanlar için otomasyonlar ve rutin işleri kolaylaştıran şirket içi AI araçları geliştirerek dijital dönüşüme katkı sağlıyorum.</span><span class="t-en">Coordinate company-wide AI integration, building department-specific automations and internal AI tools that simplify routine work and support digital transformation.</span></li>
-              <li class="d"><span class="t-tr">Temmuz 2026’da Tam Hangers’a katıldım; Bilgi Teknolojileri Uzmanı stajının ardından tam zamanlı AI Solutions Engineer rolüne geçtim.</span><span class="t-en">Joined Tam Hangers in July 2026 and later moved into the full-time AI Solutions Engineer role after the IT Specialist internship.</span></li>
+              <li class="d"><span class="t-tr">Temmuz 2026’da Tam Hangers’a Bilgi Teknolojileri Uzmanı stajyeri olarak katıldım; stajım ağustos sonunda biter bitmez tam zamanlı AI Solutions Engineer rolüne geçtim.</span><span class="t-en">Joined Tam Hangers in July 2026 as an IT Specialist intern and moved into the full-time AI Solutions Engineer role as soon as the internship ended in late August.</span></li>
               <li class="d"><span class="t-tr">Farklı departmanlardaki iş akışlarını analiz ederek tekrarlayan ve manuel süreçler için yapay zeka tabanlı otomasyonlar kuruyorum.</span><span class="t-en">Analyse workflows across departments and implement AI-powered automations for repetitive and manual processes.</span></li>
               <li class="d"><span class="t-tr">Rutin işleri kolaylaştıran şirket içi AI araçları geliştiriyorum; yapay zekanın günlük operasyonlara entegrasyonunu ve şirketin dijital dönüşümünü destekliyorum.</span><span class="t-en">Build internal AI tools that simplify routine work, integrate AI into daily operations and support the company's digital transformation.</span></li>
               <li class="d"><span class="t-tr">Her gün AI coding araçlarını kullanarak çözümleri daha hızlı prototipliyor, geliştiriyor, hata ayıklıyor ve yayımlıyorum.</span><span class="t-en">Use AI coding tools daily to prototype, ship, debug and iterate on solutions faster.</span></li>
@@ -469,7 +469,7 @@
         <article class="pcard feat reveal">
           <div class="p-top"><span class="p-kind"><span class="t-tr">★ Lisans Tezi · arXiv ön baskısı</span><span class="t-en">★ Bachelor's Thesis · arXiv preprint</span></span><span class="p-year">2025</span></div>
           <h3><span class="t-tr">LLM Distilasyonu &amp; Alana Özgü Uzmanlaşma</span><span class="t-en">LLM Distillation &amp; Domain Specialization</span></h3>
-          <p><span class="t-tr">Lisans tezim (danışman Prof. Dr. Pakize Erdoğmuş) — <i>"Domain Specific Specialization in Low-Resource Settings"</i>. Düşük kaynakla, offline response-based <b>bilgi damıtma</b> ile alana özgü bir asistan kurdum: bir <b>"Düzce Üniversitesi Mevzuat Uzmanı"</b>. Qwen-2.5-7B öğrenci modelini Unsloth ile optimize ederek A100 bellek ihtiyacını <b>40 GB → 16 GB</b> düşürdüm; yalnızca <b>500 satırlık</b> bağlam-duyarlı sentetik veriyle <b>%96,7 doğruluk</b> + sağlam reddetme elde ettim — veri kalitesinin nicelikten önemli olduğunu (LIMA hipotezi) gösterir nitelikte.</span><span class="t-en">My bachelor's thesis (advisor Prof. Pakize Erdoğmuş) — <i>"Domain Specific Specialization in Low-Resource Settings"</i>. A low-resource, offline response-based <b>knowledge-distillation</b> pipeline for a domain assistant: a <b>"Düzce University Regulation Expert"</b>. Optimizing a Qwen-2.5-7B student with Unsloth cut the A100 memory requirement from <b>40 GB → 16 GB</b>; a mere <b>500-line</b> context-aware synthetic dataset reached <b>96.7% accuracy</b> + robust rejection — evidence that data quality beats quantity (the LIMA hypothesis).</span></p>
+          <p><span class="t-tr">Lisans tezim (danışman Prof. Dr. Pakize Erdoğmuş) — <i>"Domain Specific Specialization in Low-Resource Settings"</i>. Düşük kaynakla, offline response-based <b>bilgi damıtma</b> ile alana özgü bir asistan kurdum: bir <b>"Düzce Üniversitesi Mevzuat Uzmanı"</b>. Qwen-2.5-7B öğrenci modelini Unsloth ile optimize ederek A100 bellek ihtiyacını <b>40 GB → 16 GB</b> düşürdüm; yalnızca <b>500 satırlık</b> bağlam-duyarlı sentetik veriyle 30 soruluk genel testte <b>%96,7 doğruluk</b> (mevzuat sorularında %90) + sağlam reddetme elde ettim — veri kalitesinin nicelikten önemli olduğunu (LIMA hipotezi) gösterir nitelikte.</span><span class="t-en">My bachelor's thesis (advisor Prof. Pakize Erdoğmuş) — <i>"Domain Specific Specialization in Low-Resource Settings"</i>. A low-resource, offline response-based <b>knowledge-distillation</b> pipeline for a domain assistant: a <b>"Düzce University Regulation Expert"</b>. Optimizing a Qwen-2.5-7B student with Unsloth cut the A100 memory requirement from <b>40 GB → 16 GB</b>; a mere <b>500-line</b> context-aware synthetic dataset reached <b>96.7% accuracy</b> on the 30-question general test (90% on regulation questions) + robust rejection — evidence that data quality beats quantity (the LIMA hypothesis).</span></p>
           <div class="tags"><span class="tag">PyTorch</span><span class="tag">Knowledge Distillation</span><span class="tag">Qwen-2.5-7B</span><span class="tag">Unsloth</span><span class="tag">Synthetic Data</span><span class="tag">LLM</span></div>
           <div class="p-links">
             <a href="https://arxiv.org/abs/2601.16219" target="_blank" rel="noopener" class="demo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 3h7v7M21 3l-9 9M21 14v5a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h5"/></svg>arXiv:2601.16219</a>
@@ -705,7 +705,7 @@
           <span class="when"><span class="t-tr">2022 — Haz 2026</span><span class="t-en">2022 — Jun 2026</span></span>
           <h3><span class="t-tr">Bilgisayar Mühendisliği (Lisans)</span><span class="t-en">BSc Computer Engineering</span></h3>
           <div class="school"><span class="t-tr">Düzce Üniversitesi</span><span class="t-en">Düzce University</span></div>
-          <p><span class="t-tr">GPA 3.17 / 4.00 · 4 yıllık müfredatı 3.5 yılda tamamladım · 1 yıl İngilizce hazırlık (2021–2022)</span><span class="t-en">GPA 3.17 / 4.00 · Completed the four-year curriculum in 3.5 years · One-year English preparatory programme (2021–2022)</span></p>
+          <p><span class="t-tr">Not ortalaması 3,17 / 4,00 · 4 yıllık müfredatı 3,5 yılda tamamladım · 1 yıl İngilizce hazırlık (2021–2022)</span><span class="t-en">GPA 3.17 / 4.00 · Completed the four-year curriculum in 3.5 years · One-year English preparatory programme (2021–2022)</span></p>
         </div>
         <div class="edu reveal">
           <span class="ribbon"><span class="t-tr">Tam Burslu</span><span class="t-en">Fully Funded</span></span>
